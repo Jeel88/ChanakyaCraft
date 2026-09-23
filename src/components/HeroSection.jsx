@@ -26,7 +26,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="hero-description">
-              WHERE INNOVATION MEETS COMPETITION. 18 hours of non-stop building, coding, and crafting next-gen solutions.
+              18 hours of non-stop building, coding, and crafting next-gen solutions.
             </p>
 
             <div className="hero-action-area">
