@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
 }
 
 /* Flex Helper */
@@ -46,6 +47,7 @@
   transition: color 0.15s ease;
   text-transform: uppercase;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -64,23 +66,24 @@
   box-shadow: 0 0 8px #59b335;
 }
 
-/* Center Logo */
+/* Center Logo - Single consistent crisp pixel font */
 .nav-center-logo {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .minecraft-logo-text {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 22px;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 26px;
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
-  /* letter-spacing: 1px; */
+  letter-spacing: 2px;
   text-transform: uppercase;
-  text-shadow:
+  text-shadow: 
     3px 3px 0px #2a2a2a,
     -1px -1px 0px #606060,
     1px -1px 0px #606060,
@@ -102,14 +105,14 @@
   align-items: center;
   justify-content: flex-end;
   flex: 1;
-  gap: 12px;
+  gap: 16px;
 }
 
 /* Minecraft Pixel Green Button */
 .mc-btn-green {
   background-color: #388e3c;
   color: #ffffff;
-  font-family: 'Pixelify Sans', 'Silkscreen', 'Inter', sans-serif;
+  font-family: 'Pixelify Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -119,7 +122,7 @@
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  box-shadow:
+  box-shadow: 
     inset -3px -3px 0px #1b5e20,
     inset 3px 3px 0px #66bb6a,
     0 4px 8px rgba(0, 0, 0, 0.4);
@@ -134,7 +137,7 @@
 .mc-btn-green:hover {
   background-color: #43a047;
   transform: translateY(-1px);
-  box-shadow:
+  box-shadow: 
     inset -3px -3px 0px #1b5e20,
     inset 3px 3px 0px #81c784,
     0 6px 12px rgba(0, 0, 0, 0.5);
@@ -146,12 +149,12 @@
 
 .mc-btn-green:active {
   transform: translateY(1px);
-  box-shadow:
+  box-shadow: 
     inset 3px 3px 0px #1b5e20,
     inset -3px -3px 0px #66bb6a;
 }
 
-/* Mobile responsive styles */
+/* Mobile toggle button */
 .mobile-toggle {
   display: none;
   background: #252525;
@@ -171,24 +174,24 @@
   display: none;
 }
 
-/* Responsive Media Queries */
-@media (max-width: 1024px) {
+/* Responsive Breakpoints - Tablets & Mobiles */
+@media (max-width: 1100px) {
   .nav-left {
     gap: 16px;
   }
-
   .nav-link {
     font-size: 12px;
   }
-
-  .minecraft-logo-text {
-    font-size: 20px;
-  }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 960px) {
   .nav-left {
     display: none;
+  }
+
+  /* Hide desktop register button on tablet & mobile */
+  .desktop-btn {
+    display: none !important;
   }
 
   .nav-right {
@@ -196,8 +199,7 @@
   }
 
   .minecraft-logo-text {
-    font-size: 20px;
-    letter-spacing: 1px;
+    font-size: 22px;
   }
 
   .mobile-toggle {

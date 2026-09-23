@@ -39,9 +39,10 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Right CTA Button */}
+        {/* Right Actions */}
         <div className="nav-right">
-          <Link to="/register" className="mc-btn-green flex-center">
+          {/* Desktop Register Button */}
+          <Link to="/register" className="mc-btn-green desktop-btn flex-center">
             <span>REGISTER</span>
             <ArrowRight size={16} className="btn-arrow-icon" />
           </Link>
