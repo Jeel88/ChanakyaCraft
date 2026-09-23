@@ -1,64 +1,58 @@
 import React, { useState } from 'react';
-import { ChevronDown, ExternalLink, Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { ArrowRight, Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar() {
-  const [gamesOpen, setGamesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Update', path: '/update' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Contact Us', path: '/contact' },
+    { name: 'Sponsors', path: '/sponsors' },
+  ];
 
   return (
     <nav className="minecraft-navbar">
       <div className="navbar-inner">
-        
+
         {/* Left Navigation Links */}
         <div className="nav-left">
-          <div 
-            className="nav-dropdown-wrapper"
-            onMouseEnter={() => setGamesOpen(true)}
-            onMouseLeave={() => setGamesOpen(false)}
-          >
-            <button className="nav-link dropdown-btn">
-              GAMES <ChevronDown size={14} className={`chevron-icon ${gamesOpen ? 'rotate' : ''}`} />
-            </button>
-            {gamesOpen && (
-              <div className="dropdown-menu">
-                <a href="#minecraft" className="dropdown-item">CHANAKYACRAFT</a>
-                <a href="#dungeons" className="dropdown-item">DUNGEONS</a>
-                <a href="#legends" className="dropdown-item">LEGENDS</a>
-                <a href="#education" className="dropdown-item">EDUCATION</a>
-              </div>
-            )}
-          </div>
-
-          <a href="#community" className="nav-link">COMMUNITY</a>
-          <a href="#merch" className="nav-link external-link">
-            MERCH <ExternalLink size={12} className="inline-icon" />
-          </a>
-          <a href="#support" className="nav-link external-link">
-            SUPPORT <ExternalLink size={12} className="inline-icon" />
-          </a>
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              to={link.path}
+              className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
 
         {/* Center Logo */}
         <div className="nav-center-logo">
-          <a href="/" className="minecraft-logo-text">
-            MINECRAFT
-          </a>
+          <Link to="/" className="minecraft-logo-text">
+            CHANAKYA
+          </Link>
         </div>
 
         {/* Right CTA Button */}
         <div className="nav-right">
-          <button className="mc-btn-green">
-            GET MINECRAFT
-          </button>
+          <Link to="/register" className="mc-btn-green flex-center">
+            <span>REGISTER</span>
+            <ArrowRight size={16} className="btn-arrow-icon" />
+          </Link>
 
           {/* Mobile hamburger menu toggle */}
-          <button 
+          <button
             className="mobile-toggle"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
 
@@ -67,13 +61,27 @@ export default function Navbar() {
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
         <div className="mobile-drawer">
-          <a href="#games" className="mobile-nav-link">GAMES</a>
-          <a href="#community" className="mobile-nav-link">COMMUNITY</a>
-          <a href="#merch" className="mobile-nav-link">MERCH ↗</a>
-          <a href="#support" className="mobile-nav-link">SUPPORT ↗</a>
-          <button className="mc-btn-green mobile-btn">
-            GET MINECRAFT
-          </button>
+          <div className="mobile-nav-links">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          <Link
+            to="/register"
+            className="mc-btn-green mobile-btn flex-center"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <span>REGISTER</span>
+            <ArrowRight size={16} className="btn-arrow-icon" />
+          </Link>
         </div>
       )}
     </nav>

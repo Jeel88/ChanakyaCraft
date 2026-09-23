@@ -3,9 +3,10 @@
   height: 64px;
   background-color: #191919;
   border-bottom: 2px solid #2d2d2d;
-  position: relative;
-  z-index: 100;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
 }
 
 .navbar-inner {
@@ -18,82 +19,49 @@
   justify-content: space-between;
 }
 
+/* Flex Helper */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 /* Left Nav */
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
   flex: 1;
 }
 
-.nav-dropdown-wrapper {
-  position: relative;
-}
-
 .nav-link {
-  color: #ffffff;
-  font-family: 'Inter', system-ui, sans-serif;
+  color: #d1d5db;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-decoration: none;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 4px;
   padding: 8px 0;
   transition: color 0.15s ease;
   text-transform: uppercase;
+  position: relative;
 }
 
-.nav-link:hover {
-  color: #47aa28;
+.nav-link:hover,
+.nav-link.active {
+  color: #59b335;
 }
 
-.inline-icon {
-  opacity: 0.8;
-  margin-left: 2px;
-}
-
-.chevron-icon {
-  transition: transform 0.2s ease;
-}
-
-.chevron-icon.rotate {
-  transform: rotate(180deg);
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
+.nav-link.active::after {
+  content: '';
   position: absolute;
-  top: 100%;
+  bottom: 0;
   left: 0;
-  margin-top: 12px;
-  background-color: #222222;
-  border: 2px solid #333333;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-  min-width: 180px;
-  padding: 8px 0;
-  z-index: 200;
-}
-
-.dropdown-item {
-  display: block;
-  padding: 10px 18px;
-  color: #e0e0e0;
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: 0.5px;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-.dropdown-item:hover {
-  background-color: #333333;
-  color: #47aa28;
+  width: 100%;
+  height: 2px;
+  background-color: #59b335;
+  box-shadow: 0 0 8px #59b335;
 }
 
 /* Center Logo */
@@ -101,37 +69,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .minecraft-logo-text {
-  font-family: 'Pixelify Sans', 'Press Start 2P', monospace;
-  font-size: 28px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 22px;
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
-  letter-spacing: 3px;
+  /* letter-spacing: 1px; */
   text-transform: uppercase;
-  text-shadow: 
-    3px 3px 0px #383838,
-    -1px -1px 0px #707070,
-    1px -1px 0px #707070,
-    -1px 1px 0px #383838,
+  text-shadow:
+    3px 3px 0px #2a2a2a,
+    -1px -1px 0px #606060,
+    1px -1px 0px #606060,
+    -1px 1px 0px #2a2a2a,
     0px 4px 6px rgba(0, 0, 0, 0.8);
-  transition: transform 0.2s ease, text-shadow 0.2s ease;
+  transition: transform 0.2s ease;
   user-select: none;
+  white-space: nowrap;
 }
 
 .minecraft-logo-text:hover {
   transform: scale(1.03);
-  color: #f0f0f0;
+  color: #f3f4f6;
 }
 
-/* Right Nav / Green Button */
+/* Right Nav / Green Register Button */
 .nav-right {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex: 1;
+  gap: 12px;
 }
 
 /* Minecraft Pixel Green Button */
@@ -142,31 +113,40 @@
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
-  padding: 10px 20px;
+  padding: 10px 18px;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
-  position: relative;
-  /* Pixel art bevel box-shadow technique */
-  box-shadow: 
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow:
     inset -3px -3px 0px #1b5e20,
     inset 3px 3px 0px #66bb6a,
-    0 4px 8px rgba(0,0,0,0.4);
-  transition: all 0.1s ease;
+    0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.12s ease;
+  user-select: none;
+}
+
+.btn-arrow-icon {
+  transition: transform 0.2s ease;
 }
 
 .mc-btn-green:hover {
   background-color: #43a047;
   transform: translateY(-1px);
-  box-shadow: 
+  box-shadow:
     inset -3px -3px 0px #1b5e20,
     inset 3px 3px 0px #81c784,
-    0 6px 12px rgba(0,0,0,0.5);
+    0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.mc-btn-green:hover .btn-arrow-icon {
+  transform: translateX(3px);
 }
 
 .mc-btn-green:active {
   transform: translateY(1px);
-  box-shadow: 
+  box-shadow:
     inset 3px 3px 0px #1b5e20,
     inset -3px -3px 0px #66bb6a;
 }
@@ -174,46 +154,113 @@
 /* Mobile responsive styles */
 .mobile-toggle {
   display: none;
-  background: transparent;
-  border: none;
+  background: #252525;
+  border: 1px solid #3d3d3d;
   color: #ffffff;
   cursor: pointer;
-  padding: 4px;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+.mobile-toggle:hover {
+  background-color: #333333;
 }
 
 .mobile-drawer {
   display: none;
 }
 
-@media (max-width: 900px) {
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .nav-left {
+    gap: 16px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .minecraft-logo-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 840px) {
   .nav-left {
     display: none;
   }
-  
+
+  .nav-right {
+    flex: initial;
+  }
+
+  .minecraft-logo-text {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
   .mobile-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .mobile-drawer {
     display: flex;
     flex-direction: column;
-    background-color: #191919;
-    padding: 16px 24px 24px;
-    border-bottom: 2px solid #333333;
-    gap: 16px;
+    background-color: #161616;
+    border-bottom: 3px solid #388e3c;
+    padding: 20px 24px 28px;
+    gap: 20px;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
+    animation: slideDown 0.2s ease-out forwards;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
   }
 
   .mobile-nav-link {
-    color: #ffffff;
-    font-size: 14px;
+    color: #e5e7eb;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
     font-weight: 700;
     text-decoration: none;
     letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link.active {
+    background-color: #262626;
+    color: #59b335;
   }
 
   .mobile-btn {
     width: 100%;
-    margin-top: 8px;
-    text-align: center;
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

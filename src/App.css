@@ -4,3 +4,18 @@
   background-color: #061826;
   overflow-x: hidden;
 }
+
+.placeholder-page {
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  background: radial-gradient(circle at center, #0f2b3e 0%, #061826 100%);
+  text-align: center;
+}
+
+.placeholder-content {
+  max-width: 600px;
+}
