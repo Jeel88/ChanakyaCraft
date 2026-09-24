@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Minecraft';
+  src: url('./assets/Minecraft.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
+import HomePage from './components/HomePage';
 import './App.css';
 
 function PlaceholderPage({ title, description }) {
@@ -20,7 +20,7 @@ function App() {
     <div className="app-main-layout">
       <Navbar />
       <Routes>
-        <Route path="/" element={<HeroSection />} />
+        <Route path="/" element={<HomePage />} />
         <Route 
           path="/update" 
           element={<PlaceholderPage title="Latest Updates" description="Stay tuned for the newest announcements, timeline reveals, and rulebook updates for ChanakyaCraft." />} 

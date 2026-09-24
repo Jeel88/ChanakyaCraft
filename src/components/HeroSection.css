@@ -50,7 +50,7 @@
   background-color: rgba(56, 142, 60, 0.35);
   border: 1px solid #43a047;
   color: #81c784;
-  font-family: 'Pixelify Sans', monospace;
+  font-family: 'Minecraft', monospace;
   font-size: 13px;
   font-weight: 700;
   padding: 6px 14px;
@@ -62,7 +62,7 @@
 
 /* Pixelated Title */
 .minecraft-pixel-title {
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Minecraft';
   font-size: 64px;
   line-height: 1.05;
   font-weight: 700;
@@ -117,7 +117,7 @@
 }
 
 .mc-pixel-gold-btn .btn-inner-text {
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Minecraft';
   font-size: 17px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -161,7 +161,7 @@
 }
 
 .mc-pixel-stone-btn .btn-inner-text {
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Minecraft';
   font-size: 17px;
   font-weight: 700;
   letter-spacing: 1px;

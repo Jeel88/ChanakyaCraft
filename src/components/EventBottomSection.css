@@ -1,0 +1,310 @@
+/* EventBottomSection.css - Minecraft Glass Block Aesthetic, Gold Bar & Blue Cards */
+
+.mc-bottom-section {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 85px 24px 105px 24px;
+  overflow: hidden;
+  font-family: 'Minecraft', monospace;
+  box-sizing: border-box;
+}
+
+.mc-bottom-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Title */
+.mc-news-header {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.mc-news-title {
+  font-family: 'Minecraft';
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Cards Row Layout (Equal Card Heights & Widths) */
+.mc-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+  max-width: 1180px;
+  align-items: stretch;
+}
+
+/* -------------------------------------------------- */
+/* MINECRAFT GLASS BLOCK 3-PIXEL SHINE CORNERS */
+/* -------------------------------------------------- */
+
+.mc-glass-shine {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  z-index: 12;
+}
+
+.mc-glass-shine.top-left {
+  top: 18px;
+  left: 18px;
+}
+
+.mc-glass-shine.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Authentic 3-Pixel Diagonal Minecraft Glass Highlight Streak */
+.shine-pixel {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+}
+
+.shine-pixel.p1 {
+  top: 0px;
+  left: 0px;
+}
+
+.shine-pixel.p2 {
+  top: 6px;
+  left: 6px;
+}
+
+.shine-pixel.p3 {
+  top: 12px;
+  left: 12px;
+}
+
+/* -------------------------------------------------- */
+/* FEATURE CARD BASE & THEMED MINECRAFT GLASS STYLES */
+/* -------------------------------------------------- */
+
+.mc-feature-card {
+  position: relative;
+  border-style: solid;
+  border-width: 4px;
+  box-shadow: 8px 8px 0px #000000;
+  padding: 44px 24px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  min-height: 380px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s ease;
+  user-select: none;
+  overflow: hidden;
+}
+
+.mc-feature-card:hover {
+  transform: translateY(-8px);
+}
+
+/* SIDE CARDS: BLUE LAPIS CYAN GLASS THEME */
+.card-blue-glass {
+  background-color: rgba(8, 26, 40, 0.92);
+  border-color: #38bdf8;
+  box-shadow:
+    inset 2px 2px 0px rgba(186, 230, 253, 0.35),
+    inset -2px -2px 0px rgba(12, 74, 110, 0.8),
+    8px 8px 0px #000000,
+    0 0 22px rgba(56, 189, 248, 0.22);
+}
+
+.card-blue-glass:hover {
+  border-color: #7dd3fc;
+  box-shadow:
+    inset 2px 2px 0px rgba(255, 255, 255, 0.5),
+    inset -2px -2px 0px rgba(12, 74, 110, 0.9),
+    12px 12px 0px #000000,
+    0 0 35px rgba(125, 211, 252, 0.45);
+}
+
+/* CENTER CARD: MINECRAFT GOLD BAR THEME */
+.card-gold-bar {
+  background: radial-gradient(circle at center, rgba(50, 36, 10, 0.95) 0%, rgba(26, 18, 5, 0.96) 100%);
+  border-color: #fbbf24;
+  border-width: 4px;
+  box-shadow:
+    inset 3px 3px 0px rgba(254, 240, 138, 0.5),
+    inset -3px -3px 0px rgba(146, 64, 14, 0.9),
+    8px 8px 0px #000000,
+    0 0 25px rgba(251, 191, 36, 0.35);
+}
+
+.card-gold-bar:hover {
+  border-color: #fef08a;
+  box-shadow:
+    inset 3px 3px 0px rgba(255, 255, 255, 0.7),
+    inset -3px -3px 0px rgba(146, 64, 14, 0.95),
+    12px 12px 0px #000000,
+    0 0 40px rgba(254, 240, 138, 0.55);
+}
+
+.text-gold {
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #78350f, 0 0 10px rgba(251, 191, 36, 0.5);
+  font-size: 28px;
+}
+
+.prize-highlight-gold {
+  color: #fde047;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 0px #451a03;
+}
+
+/* SIDE CARD TEXT STYLES */
+.text-cyan {
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #0c4a6e;
+}
+
+.text-cyan-sub {
+  color: #bae6fd;
+  text-shadow: 1px 1px 0px #082f49;
+}
+
+/* Icon Container */
+.card-icon-wrapper {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88px;
+}
+
+.mc-pixel-svg,
+.mc-asset-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  filter: drop-shadow(2px 4px 0px rgba(0, 0, 0, 0.6));
+  transition: transform 0.25s ease;
+}
+
+/* Increased size specifically for Sword and Gold Bar icons */
+.mc-asset-icon.sword-icon {
+  width: 88px;
+  height: 88px;
+}
+
+.mc-asset-icon.gold-icon {
+  width: 84px;
+  height: 84px;
+}
+
+.mc-asset-icon.compass-icon {
+  width: 84px;
+  height: 84px;
+}
+
+.mc-feature-card:hover .mc-pixel-svg,
+.mc-feature-card:hover .mc-asset-icon {
+  transform: scale(1.15) rotate(-4deg);
+}
+
+/* Card Titles & Typography */
+.card-main-title {
+  font-family: 'Minecraft';
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 14px 0;
+}
+
+.location-title {
+  font-size: 20px;
+  line-height: 1.25;
+  max-width: 260px;
+}
+
+.card-sub-title {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* Location Link Redirection Tag */
+.card-location-link {
+  cursor: pointer;
+}
+
+.location-redirect-tag-cyan {
+  margin-top: 20px;
+  background-color: #38bdf8;
+  color: #041f33;
+  border: 2px solid #000000;
+  padding: 8px 16px;
+  font-family: 'Minecraft';
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: inset -2px -2px 0px #0284c7, inset 2px 2px 0px #bae6fd, 2px 2px 0px #000000;
+  transition: all 0.2s ease;
+}
+
+.card-location-link:hover .location-redirect-tag-cyan {
+  background-color: #7dd3fc;
+  color: #000000;
+  transform: scale(1.05);
+}
+
+/* -------------------------------------------------- */
+/* RESPONSIVE STYLES */
+/* -------------------------------------------------- */
+
+@media (max-width: 960px) {
+  .mc-cards-row {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+  }
+
+  .mc-feature-card {
+    min-height: 320px;
+    padding: 36px 20px;
+  }
+
+  .card-main-title {
+    font-size: 24px;
+  }
+
+  .location-title {
+    font-size: 20px;
+  }
+
+  .mc-news-title {
+    font-size: 28px;
+  }
+}
