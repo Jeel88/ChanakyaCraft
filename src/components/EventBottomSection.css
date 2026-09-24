@@ -3,14 +3,23 @@
 .mc-bottom-section {
   position: relative;
   width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: #ffffff;
   padding: 85px 24px 105px 24px;
   overflow: hidden;
   font-family: 'Minecraft', monospace;
   box-sizing: border-box;
+}
+
+.mc-bottom-bg-picture,
+.mc-bottom-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .mc-bottom-container {
@@ -116,14 +125,11 @@
   min-height: 380px;
   user-select: none;
   overflow: hidden;
-  /* Hardware Acceleration (GPU layer to prevent hover lag & mobile crashes) */
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
   transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.15s ease;
 }
 
 .mc-feature-card:hover {
-  transform: translate3d(0, -6px, 0);
+  transform: translateY(-6px);
   box-shadow: 10px 10px 0px #000000;
 }
 
@@ -203,7 +209,6 @@
   object-fit: contain;
   image-rendering: pixelated;
   filter: drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.5));
-  will-change: transform;
   transition: transform 0.15s ease;
 }
 

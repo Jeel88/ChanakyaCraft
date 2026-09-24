@@ -1,8 +1,16 @@
 import React from 'react';
-import backdropWool from '../assets/images/BackdropWool.png';
-import swordIcon from '../assets/images/SwordPixels.png';
-import goldIcon from '../assets/images/GoldPixel.png';
-import compassIcon from '../assets/images/CompassPixel.png';
+import backdropWoolWebp from '../assets/images/BackdropWool.webp';
+import backdropWoolPng from '../assets/images/BackdropWool.png';
+
+import swordIconWebp from '../assets/images/SwordPixels.webp';
+import swordIconPng from '../assets/images/SwordPixels.png';
+
+import goldIconWebp from '../assets/images/GoldPixel.webp';
+import goldIconPng from '../assets/images/GoldPixel.png';
+
+import compassIconWebp from '../assets/images/CompassPixel.webp';
+import compassIconPng from '../assets/images/CompassPixel.png';
+
 import './EventBottomSection.css';
 
 // 3-Pixel Minecraft Corner Glass Shine Component (Top-Left & Opposite Bottom-Right)
@@ -25,10 +33,19 @@ export default function EventBottomSection() {
   const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Shri+Bhagubhai+Mafatlal+Polytechnic+and+College+of+Engineering";
 
   return (
-    <section 
-      className="mc-bottom-section"
-      style={{ backgroundImage: `url(${backdropWool})` }}
-    >
+    <section className="mc-bottom-section">
+      {/* Background Image with HTML Lazy Loading */}
+      <picture className="mc-bottom-bg-picture">
+        <source srcSet={backdropWoolWebp} type="image/webp" />
+        <img 
+          src={backdropWoolPng} 
+          alt="Backdrop Wool Texture" 
+          className="mc-bottom-bg-img"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+
       <div className="mc-bottom-container">
         
         {/* Title Header */}
@@ -44,7 +61,18 @@ export default function EventBottomSection() {
             <MinecraftGlassCornerShines />
             
             <div className="card-icon-wrapper">
-              <img src={swordIcon} alt="Minecraft Sword" className="mc-asset-icon sword-icon" />
+              <picture>
+                <source srcSet={swordIconWebp} type="image/webp" />
+                <img 
+                  src={swordIconPng} 
+                  alt="Minecraft Sword" 
+                  className="mc-asset-icon sword-icon" 
+                  loading="lazy"
+                  decoding="async"
+                  width="88"
+                  height="88"
+                />
+              </picture>
             </div>
             <h3 className="card-main-title text-cyan">23RD & 24TH OCT</h3>
             <p className="card-sub-title text-cyan-sub">2 DAYS OF ENDLESS POSSIBILITIES</p>
@@ -55,7 +83,18 @@ export default function EventBottomSection() {
             <MinecraftGlassCornerShines />
 
             <div className="card-icon-wrapper">
-              <img src={goldIcon} alt="Minecraft Gold" className="mc-asset-icon gold-icon" />
+              <picture>
+                <source srcSet={goldIconWebp} type="image/webp" />
+                <img 
+                  src={goldIconPng} 
+                  alt="Minecraft Gold" 
+                  className="mc-asset-icon gold-icon" 
+                  loading="lazy"
+                  decoding="async"
+                  width="84"
+                  height="84"
+                />
+              </picture>
             </div>
             <h3 className="card-main-title text-gold">PRIZE POOL</h3>
             <p className="card-sub-title prize-highlight-gold">₹50K WORTH OF PRIZES</p>
@@ -72,7 +111,18 @@ export default function EventBottomSection() {
             <MinecraftGlassCornerShines />
             
             <div className="card-icon-wrapper">
-              <img src={compassIcon} alt="Minecraft Compass" className="mc-asset-icon compass-icon" />
+              <picture>
+                <source srcSet={compassIconWebp} type="image/webp" />
+                <img 
+                  src={compassIconPng} 
+                  alt="Minecraft Compass" 
+                  className="mc-asset-icon compass-icon" 
+                  loading="lazy"
+                  decoding="async"
+                  width="84"
+                  height="84"
+                />
+              </picture>
             </div>
             <h3 className="card-main-title location-title text-cyan">
               SHRI BHAGUBHAI MAFATLAL AND COLLEGE OF ENGINEERING
@@ -90,3 +140,4 @@ export default function EventBottomSection() {
     </section>
   );
 }
+

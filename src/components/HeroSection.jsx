@@ -1,16 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import landingBg from '../assets/images/LandingPageAqua.jpg';
+import landingBgWebp from '../assets/images/LandingPageAqua.webp';
+import landingBgJpg from '../assets/images/LandingPageAqua.jpg';
 import './HeroSection.css';
 
 export default function HeroSection() {
   return (
     <div className="hero-viewport">
-      {/* Background Image Container */}
-      <div
-        className="hero-bg-container"
-        style={{ backgroundImage: `url(${landingBg})` }}
-      >
+      {/* Background Image Container with Optimized HTML Image Loading */}
+      <div className="hero-bg-container">
+        <picture className="hero-bg-picture">
+          <source srcSet={landingBgWebp} type="image/webp" />
+          <img 
+            src={landingBgJpg} 
+            alt="ChanakyaCraft Hero Background" 
+            className="hero-bg-img"
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
         <div className="hero-gradient-overlay" />
 
         {/* Content Box */}
@@ -48,3 +56,4 @@ export default function HeroSection() {
     </div>
   );
 }
+
