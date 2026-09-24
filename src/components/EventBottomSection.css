@@ -1,4 +1,4 @@
-/* EventBottomSection.css - Minecraft Glass Block Aesthetic, Gold Bar & Blue Cards */
+/* EventBottomSection.css - High Performance GPU-Accelerated Minecraft Cards */
 
 .mc-bottom-section {
   position: relative;
@@ -30,13 +30,14 @@
 }
 
 .mc-news-title {
-  font-family: 'Minecraft';
+  font-family: 'Minecraft', monospace;
   font-size: 36px;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin: 0;
+  text-shadow: 3px 3px 0px #000000;
 }
 
 /* Cards Row Layout (Equal Card Heights & Widths) */
@@ -77,7 +78,7 @@
   width: 5px;
   height: 5px;
   background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
 }
 
 .shine-pixel.p1 {
@@ -96,14 +97,14 @@
 }
 
 /* -------------------------------------------------- */
-/* FEATURE CARD BASE & THEMED MINECRAFT GLASS STYLES */
+/* FEATURE CARD BASE & HIGH-PERFORMANCE STYLES */
 /* -------------------------------------------------- */
 
 .mc-feature-card {
   position: relative;
   border-style: solid;
   border-width: 4px;
-  box-shadow: 8px 8px 0px #000000;
+  box-shadow: 6px 6px 0px #000000;
   padding: 44px 24px 40px 24px;
   display: flex;
   flex-direction: column;
@@ -113,26 +114,27 @@
   text-decoration: none;
   box-sizing: border-box;
   min-height: 380px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s ease;
   user-select: none;
   overflow: hidden;
+  /* Hardware Acceleration (GPU layer to prevent hover lag & mobile crashes) */
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.15s ease;
 }
 
 .mc-feature-card:hover {
-  transform: translateY(-8px);
+  transform: translate3d(0, -6px, 0);
+  box-shadow: 10px 10px 0px #000000;
 }
 
 /* SIDE CARDS: BLUE LAPIS CYAN GLASS THEME */
 .card-blue-glass {
-  background-color: rgba(8, 26, 40, 0.92);
+  background-color: #061826;
   border-color: #38bdf8;
   box-shadow:
     inset 2px 2px 0px rgba(186, 230, 253, 0.35),
     inset -2px -2px 0px rgba(12, 74, 110, 0.8),
-    8px 8px 0px #000000,
-    0 0 22px rgba(56, 189, 248, 0.22);
+    6px 6px 0px #000000;
 }
 
 .card-blue-glass:hover {
@@ -140,20 +142,17 @@
   box-shadow:
     inset 2px 2px 0px rgba(255, 255, 255, 0.5),
     inset -2px -2px 0px rgba(12, 74, 110, 0.9),
-    12px 12px 0px #000000,
-    0 0 35px rgba(125, 211, 252, 0.45);
+    10px 10px 0px #000000;
 }
 
 /* CENTER CARD: MINECRAFT GOLD BAR THEME */
 .card-gold-bar {
-  background: radial-gradient(circle at center, rgba(50, 36, 10, 0.95) 0%, rgba(26, 18, 5, 0.96) 100%);
+  background-color: #241908;
   border-color: #fbbf24;
-  border-width: 4px;
   box-shadow:
     inset 3px 3px 0px rgba(254, 240, 138, 0.5),
     inset -3px -3px 0px rgba(146, 64, 14, 0.9),
-    8px 8px 0px #000000,
-    0 0 25px rgba(251, 191, 36, 0.35);
+    6px 6px 0px #000000;
 }
 
 .card-gold-bar:hover {
@@ -161,13 +160,12 @@
   box-shadow:
     inset 3px 3px 0px rgba(255, 255, 255, 0.7),
     inset -3px -3px 0px rgba(146, 64, 14, 0.95),
-    12px 12px 0px #000000,
-    0 0 40px rgba(254, 240, 138, 0.55);
+    10px 10px 0px #000000;
 }
 
 .text-gold {
   color: #ffffff;
-  text-shadow: 2px 2px 0px #78350f, 0 0 10px rgba(251, 191, 36, 0.5);
+  text-shadow: 2px 2px 0px #78350f;
   font-size: 28px;
 }
 
@@ -204,11 +202,12 @@
   height: 64px;
   object-fit: contain;
   image-rendering: pixelated;
-  filter: drop-shadow(2px 4px 0px rgba(0, 0, 0, 0.6));
-  transition: transform 0.25s ease;
+  filter: drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.5));
+  will-change: transform;
+  transition: transform 0.15s ease;
 }
 
-/* Increased size specifically for Sword and Gold Bar icons */
+/* Specific sizing for Sword, Gold Bar, and Compass icons */
 .mc-asset-icon.sword-icon {
   width: 88px;
   height: 88px;
@@ -226,12 +225,12 @@
 
 .mc-feature-card:hover .mc-pixel-svg,
 .mc-feature-card:hover .mc-asset-icon {
-  transform: scale(1.15) rotate(-4deg);
+  transform: scale(1.1) rotate(-3deg);
 }
 
 /* Card Titles & Typography */
 .card-main-title {
-  font-family: 'Minecraft';
+  font-family: 'Minecraft', monospace;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.15;
@@ -250,9 +249,8 @@
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
   letter-spacing: 2px;
+  text-transform: uppercase;
   margin: 0;
 }
 
@@ -267,22 +265,21 @@
   color: #041f33;
   border: 2px solid #000000;
   padding: 8px 16px;
-  font-family: 'Minecraft';
+  font-family: 'Minecraft', monospace;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
   box-shadow: inset -2px -2px 0px #0284c7, inset 2px 2px 0px #bae6fd, 2px 2px 0px #000000;
-  transition: all 0.2s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .card-location-link:hover .location-redirect-tag-cyan {
   background-color: #7dd3fc;
   color: #000000;
-  transform: scale(1.05);
 }
 
 /* -------------------------------------------------- */
-/* RESPONSIVE STYLES */
+/* RESPONSIVE & MOBILE PERFORMANCE STYLES */
 /* -------------------------------------------------- */
 
 @media (max-width: 960px) {
