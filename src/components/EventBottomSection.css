@@ -279,29 +279,88 @@
 }
 
 /* -------------------------------------------------- */
-/* RESPONSIVE & MOBILE PERFORMANCE STYLES */
+/* RESPONSIVE & MOBILE OPTIMIZED STYLES */
 /* -------------------------------------------------- */
 
 @media (max-width: 960px) {
-  .mc-cards-row {
-    grid-template-columns: 1fr;
-    max-width: 440px;
+  .mc-bottom-section {
+    padding: 60px 20px 80px 20px;
   }
 
-  .mc-feature-card {
-    min-height: 320px;
-    padding: 36px 20px;
-  }
-
-  .card-main-title {
-    font-size: 24px;
-  }
-
-  .location-title {
-    font-size: 20px;
+  .mc-news-header {
+    margin-bottom: 32px;
   }
 
   .mc-news-title {
-    font-size: 28px;
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+
+  .mc-cards-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mc-feature-card {
+    width: 100%;
+    max-width: 280px;
+    min-height: 260px;
+    padding: 32px 20px;
+    box-shadow: 6px 6px 0px #000000;
+  }
+
+  .card-icon-wrapper {
+    height: 72px;
+    margin-bottom: 18px;
+  }
+
+  .mc-asset-icon.sword-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .mc-asset-icon.gold-icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  .mc-asset-icon.compass-icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  .card-main-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .location-title {
+    font-size: 18px;
+    line-height: 1.25;
+    max-width: 260px;
+  }
+
+  .card-sub-title {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .prize-highlight-gold {
+    font-size: 13px;
+  }
+
+  .location-redirect-tag-cyan {
+    margin-top: 16px;
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .mc-glass-shine.top-left {
+    top: 12px;
+    left: 12px;
   }
 }
