@@ -199,16 +199,15 @@
 /* MOBILE SCREEN SPECIFIC STYLES (Center Aligned + 70vh Height) */
 @media (max-width: 768px) {
   .hero-viewport {
-    height: 65vh;
+    height: 62vh;
     min-height: 480px;
     max-height: 620px;
   }
 
   .hero-bg-container {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding-top: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
   }
 
   .hero-bg-img {
