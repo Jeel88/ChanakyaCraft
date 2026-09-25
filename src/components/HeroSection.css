@@ -199,7 +199,7 @@
 /* MOBILE SCREEN SPECIFIC STYLES (Center Aligned + 70vh Height) */
 @media (max-width: 768px) {
   .hero-viewport {
-    height: 60vh;
+    height: 65vh;
     min-height: 480px;
     max-height: 620px;
   }
