@@ -192,7 +192,7 @@ export default function HackathonInfoSection() {
                   <li>🏅 Present your project before an expert jury</li>
                   <li>🌐 Expand your professional network</li>
                   <li>🎯 Enhance your technical and problem-solving skills</li>
-                  <li>🏆 Win exciting prizes and gain recognition</li>
+                  <li>🏆 Compete for ₹50K Cash Prize Pool (1st: ₹25K | 2nd: ₹15K | 3rd: ₹10K)</li>
                 </ul>
               </div>
 

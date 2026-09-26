@@ -67,18 +67,6 @@ export default function ContactSection() {
 
   return (
     <div className="mc-contact-page-wrapper">
-      {/* Dark Wool Background */}
-      <picture className="mc-contact-bg-picture">
-        <source srcSet={backdropWoolWebp} type="image/webp" />
-        <img
-          src={backdropWoolPng}
-          alt="Dark Wool Background"
-          className="mc-contact-bg-img"
-          loading="lazy"
-          decoding="async"
-        />
-      </picture>
-
       <div className="mc-contact-container">
 
         {/* Page Title Header */}

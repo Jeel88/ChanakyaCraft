@@ -47,7 +47,7 @@ export default function FaqSection() {
     {
       id: 8,
       question: 'What are the prizes and recognition for winners?',
-      answer: 'Top-performing teams will compete for cash prizes worth ₹50K+, official trophies, certificates of excellence, and networking opportunities with industry mentors.'
+      answer: 'Winning teams will compete for cash prizes up to ₹50,000, alongside official trophies, certificates of excellence, and networking opportunities with industry mentors.'
     },
     {
       id: 9,
@@ -68,18 +68,6 @@ export default function FaqSection() {
 
   return (
     <div className="mc-faq-page-wrapper">
-      {/* Dark Wool Background */}
-      <picture className="mc-faq-bg-picture">
-        <source srcSet={backdropWoolWebp} type="image/webp" />
-        <img
-          src={backdropWoolPng}
-          alt="Dark Wool Background"
-          className="mc-faq-bg-img"
-          loading="lazy"
-          decoding="async"
-        />
-      </picture>
-
       <div className="mc-faq-container">
 
         {/* Header Title Section */}

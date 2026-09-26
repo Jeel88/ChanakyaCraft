@@ -15,7 +15,7 @@
   display: none;
 }
 
-/* Main Container with Entrance Animation */
+/* Main Container */
 .mc-faq-container {
   max-width: 920px;
   margin: 0 auto;
@@ -24,7 +24,6 @@
   display: flex;
   flex-direction: column;
   gap: 36px;
-  animation: pageEntrance 0.45s ease-out forwards;
 }
 
 /* Page Header */
@@ -33,7 +32,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: slideUpCard 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
 }
 
 .mc-faq-badge {
@@ -119,7 +117,6 @@
   flex-direction: column;
   gap: 16px;
   width: 100%;
-  animation: slideUpCard 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
 }
 
 /* CLOSED CARD STYLING */

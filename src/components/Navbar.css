@@ -239,7 +239,15 @@
     text-transform: uppercase;
     padding: 8px 12px;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .mobile-nav-icon {
+    color: #ffffff;
+    flex-shrink: 0;
   }
 
   .mobile-nav-link:hover,

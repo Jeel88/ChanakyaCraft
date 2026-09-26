@@ -1,6 +1,4 @@
 import React from 'react';
-import backdropWoolWebp from '../assets/images/BackdropWool.webp';
-import backdropWoolPng from '../assets/images/BackdropWool.png';
 import characterPng from '../assets/images/character.png';
 import dogPng from '../assets/images/Dog.png';
 import './AboutSection.css';
@@ -8,18 +6,6 @@ import './AboutSection.css';
 export default function AboutSection() {
   return (
     <div className="mc-about-page-wrapper">
-      {/* Dark Wool Background */}
-      <picture className="mc-about-bg-picture">
-        <source srcSet={backdropWoolWebp} type="image/webp" />
-        <img
-          src={backdropWoolPng}
-          alt="Dark Wool Background"
-          className="mc-about-bg-img"
-          loading="lazy"
-          decoding="async"
-        />
-      </picture>
-
       <div className="mc-about-container">
 
         {/* Page Title Header */}

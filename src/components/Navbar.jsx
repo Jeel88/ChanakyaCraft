@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight, Menu, X } from 'lucide-react';
+import { ArrowRight, Menu, X, Home, Bell, Clock, Info, HelpCircle, Award, Image, Phone } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -17,16 +17,16 @@ export default function Navbar() {
     { name: 'Sponsors', path: '/sponsors' },
   ];
 
-  // Complete Mobile Hamburger Drawer links
+  // Complete Mobile Hamburger Drawer links with white icons
   const mobileNavLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Updates', path: '/update' },
-    { name: 'Timeline', path: '/update#timeline' },
-    { name: 'About Us', path: '/about' },
-    { name: 'FAQ', path: '/faq' },
-    { name: 'Sponsors', path: '/sponsors' },
-    { name: 'Gallery', path: '/about#gallery' },
-    { name: 'Contact Us', path: '/contact' },
+    { name: 'Home', path: '/', icon: Home },
+    { name: 'Updates', path: '/update', icon: Bell },
+    { name: 'Timeline', path: '/update#timeline', icon: Clock },
+    { name: 'About Us', path: '/about', icon: Info },
+    { name: 'FAQ', path: '/faq', icon: HelpCircle },
+    { name: 'Sponsors', path: '/sponsors', icon: Award },
+    { name: 'Gallery', path: '/about#gallery', icon: Image },
+    { name: 'Contact Us', path: '/contact', icon: Phone },
   ];
 
   const currentFullPath = location.pathname + location.hash;
@@ -82,20 +82,24 @@ export default function Navbar() {
 
       </div>
 
-      {/* Mobile Drawer Menu with All Links */}
+      {/* Mobile Drawer Menu with All Links & White Icons */}
       {mobileMenuOpen && (
         <div className="mobile-drawer">
           <div className="mobile-nav-links">
-            {mobileNavLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`mobile-nav-link ${isLinkActive(link.path) ? 'active' : ''}`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {mobileNavLinks.map((link) => {
+              const IconComponent = link.icon;
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`mobile-nav-link ${isLinkActive(link.path) ? 'active' : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <IconComponent size={18} className="mobile-nav-icon" />
+                  <span>{link.name}</span>
+                </Link>
+              );
+            })}
           </div>
 
           <Link

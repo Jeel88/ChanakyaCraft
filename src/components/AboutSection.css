@@ -24,14 +24,12 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
-  animation: pageEntrance 0.5s ease-out forwards;
 }
 
 /* Page Header */
 .mc-about-header {
   text-align: center;
   margin-bottom: 10px;
-  animation: slideUpCard 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
 }
 
 .mc-about-badge {
@@ -58,9 +56,9 @@
   letter-spacing: 2px;
   margin: 0;
   text-shadow:
-    3px 3px 0px #1a1a1a,
-    -1px -1px 0px #555555,
-    0px 4px 12px rgba(0, 0, 0, 0.8);
+    3px 3px 0px #388e3c,
+    -1px -1px 0px #81c784,
+    0px 6px 14px rgba(0, 0, 0, 0.9);
 }
 
 /* SECTION 1: Fest Card + Main Character */
@@ -70,7 +68,6 @@
   justify-content: space-between;
   gap: 44px;
   width: 100%;
-  animation: slideUpCard 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
 }
 
 /* Common Paper Card Styling */
@@ -187,7 +184,6 @@
   box-shadow: 8px 8px 0px #000000;
   padding: 36px;
   box-sizing: border-box;
-  animation: slideUpCard 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.22s forwards;
 }
 
 .mc-sbmp-card {

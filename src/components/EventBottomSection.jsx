@@ -97,7 +97,7 @@ export default function EventBottomSection() {
               </picture>
             </div>
             <h3 className="card-main-title text-gold">PRIZE POOL</h3>
-            <p className="card-sub-title prize-highlight-gold">₹50K WORTH OF PRIZES</p>
+            <p className="card-sub-title prize-highlight-gold">UP TO ₹50K IN PRIZES</p>
           </div>
 
           {/* CARD 3: LOCATION (Blue Cyan Glass Theme with Compass Icon & Google Maps Redirect) */}
