@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import blockAbovePixelsPng from '../assets/images/BlockAbovePixels.png';
 import hackathonPhotoPng from '../assets/images/HackathonSecphoto.png';
 import backdropWoolPng from '../assets/images/BackdropWool.png';
@@ -117,13 +118,13 @@ export default function HackathonInfoSection() {
             aria-modal="true"
             aria-labelledby="mc-modal-title"
           >
-            {/* Modal Header */}
-            <div className="mc-modal-header">
-              <h3 id="mc-modal-title" className="mc-modal-title">
+            {/* Minecraft Theme Header Bar */}
+            <div className="mc-modal-header-theme">
+              <h3 id="mc-modal-title" className="mc-modal-theme-title">
                 CHANAKYACRAFT HACKATHON
               </h3>
               <button 
-                className="mc-modal-close-btn"
+                className="mc-modal-theme-close-btn"
                 onClick={() => setIsModalOpen(false)}
                 aria-label="Close popup modal"
                 type="button"
@@ -132,35 +133,104 @@ export default function HackathonInfoSection() {
               </button>
             </div>
 
-            {/* Modal Content */}
-            <div className="mc-modal-content">
-              <div className="mc-modal-tag">⚡ 18-HOUR BUILD & 6-HOUR EVALUATION</div>
+            {/* Light Content Body */}
+            <div className="mc-modal-body-light">
+              
+              {/* Gold Highlight Stat Card */}
+              <div className="mc-gold-stat-card">
+                <div className="mc-gold-stat-icon">⚡</div>
+                <div className="mc-gold-stat-text">
+                  <div className="mc-gold-stat-title">CHANAKYACRAFT HACKATHON</div>
+                  <div className="mc-gold-stat-sub">18 Hours of Intensive Building</div>
+                </div>
+              </div>
 
-              <h4 className="mc-modal-subheading">ABOUT THE EVENT</h4>
-              <p className="mc-modal-text">
-                Challenge yourself in an intensive 18-hour hackathon where teams collaborate to transform innovative ideas into functional solutions. Participants will spend 18 hours developing their projects, followed by 6 hours of evaluation by an expert judging panel. Work on real-world challenges, demonstrate your technical expertise, and compete for exciting prizes while networking with fellow innovators.
+              {/* Main Introduction */}
+              <p className="mc-modal-intro-text">
+                The <strong>ChanakyaCraft 18-Hour Hackathon</strong> is designed to inspire creativity, innovation, and problem-solving by bringing together passionate students from diverse technical backgrounds. Over an exciting 18-hour journey, participants will collaborate, design, develop, and present impactful solutions that address real-world challenges.
               </p>
 
-              <div className="mc-modal-grid">
-                <div className="mc-modal-card">
-                  <span className="mc-card-label">⏱ TIME DURATION</span>
-                  <span className="mc-card-value">18 Hours Hackathon + 6 Hours Judging</span>
-                </div>
-                <div className="mc-modal-card">
-                  <span className="mc-card-label">💡 MENTORSHIP</span>
-                  <span className="mc-card-value">1-on-1 Industry Mentorship</span>
+              {/* Consists Of Section */}
+              <div className="mc-modal-section">
+                <h4 className="mc-section-heading">THE HACKATHON CONSISTS OF:</h4>
+                <div className="mc-cards-grid">
+                  <div className="mc-detail-card">
+                    <div className="mc-card-header">
+                      <span className="mc-card-emoji">⏱️</span>
+                      <span className="mc-card-title">18 Hours of Development</span>
+                    </div>
+                    <p className="mc-card-desc">
+                      Teams will brainstorm, design, code, test, and refine their projects while receiving guidance from mentors throughout the event.
+                    </p>
+                  </div>
+
+                  <div className="mc-detail-card">
+                    <div className="mc-card-header">
+                      <span className="mc-card-emoji">🏆</span>
+                      <span className="mc-card-title">Project Evaluation</span>
+                    </div>
+                    <p className="mc-card-desc">
+                      After development, each team will present their solution to an expert panel. Projects will be evaluated based on innovation, technical implementation, usability, scalability, presentation, and overall impact.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="mc-modal-placeholder-box">
-                <p>📌 Detailed schedule, rulebook, and track guidelines will be updated here in the upcoming task.</p>
+              {/* Emerging Tech Domain Statement */}
+              <p className="mc-modal-intro-text">
+                Participants are encouraged to build solutions across multiple emerging technology domains, fostering creativity and interdisciplinary collaboration. Whether your idea addresses societal challenges, business needs, or technological advancements, this hackathon provides the perfect platform to showcase your skills and transform ideas into reality.
+              </p>
+
+              {/* Why Participate Section */}
+              <div className="mc-modal-section">
+                <h4 className="mc-section-heading">🚀 WHY PARTICIPATE?</h4>
+                <ul className="mc-list-bullets">
+                  <li>🚀 Build innovative solutions in just 18 hours</li>
+                  <li>🤝 Collaborate with talented developers and designers</li>
+                  <li>💡 Solve real-world challenges</li>
+                  <li>👨‍🏫 Receive mentorship from industry professionals</li>
+                  <li>🏅 Present your project before an expert jury</li>
+                  <li>🌐 Expand your professional network</li>
+                  <li>🎯 Enhance your technical and problem-solving skills</li>
+                  <li>🏆 Win exciting prizes and gain recognition</li>
+                </ul>
               </div>
+
+              {/* Eligibility Section */}
+              <div className="mc-modal-section">
+                <h4 className="mc-section-heading">📋 ELIGIBILITY</h4>
+                <div className="mc-info-box">
+                  <p>• Open to students from recognized institutions.</p>
+                  <p>• Team size: 2–4 members</p>
+                </div>
+              </div>
+
+              {/* What to Expect Section */}
+              <div className="mc-modal-section">
+                <h4 className="mc-section-heading">🎯 WHAT TO EXPECT?</h4>
+                <ul className="mc-list-bullets">
+                  <li>⚡ Continuous coding and development sessions</li>
+                  <li>💡 Mentor guidance throughout the event</li>
+                  <li>🌐 Technical support and networking opportunities</li>
+                  <li>🏅 Professional project evaluation</li>
+                  <li>📜 Certificates for all eligible participants</li>
+                  <li>🏆 Exciting rewards for outstanding projects</li>
+                </ul>
+              </div>
+
             </div>
 
-            {/* Modal Actions */}
-            <div className="mc-modal-footer">
+            {/* Modal Footer Actions */}
+            <div className="mc-modal-footer-light">
+              <Link 
+                to="/register" 
+                className="mc-modal-register-btn"
+                onClick={() => setIsModalOpen(false)}
+              >
+                JOIN THE HACKATHON
+              </Link>
               <button 
-                className="mc-modal-btn-close"
+                className="mc-modal-close-btn-style"
                 onClick={() => setIsModalOpen(false)}
                 type="button"
               >
