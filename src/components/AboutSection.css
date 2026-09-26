@@ -257,6 +257,297 @@
   color: #0284c7;
 }
 
+/* SECTION 3, 4 & 5: TEAM SECTIONS & VISIONARIES BANNER */
+.mc-team-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 28px;
+}
+
+/* Red / White Pixel Header Banners */
+.mc-section-header-banner {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Minecraft', sans-serif;
+  font-size: clamp(18px, 2.4vw, 28px);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 10px 28px;
+  border: 3.5px solid #000000;
+  box-shadow: 5px 5px 0px #000000;
+  transform: rotate(-1deg);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Faculty Grid Top (3 columns) */
+.mc-faculty-grid-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1050px;
+}
+
+/* Faculty Grid Bottom (1 centered card) */
+.mc-faculty-grid-bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mc-team-card-center {
+  width: 100%;
+  max-width: 330px;
+}
+
+/* Core Leads Grid (2 columns centered) */
+.mc-core-leads-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.mc-core-leads-grid .mc-team-card {
+  flex: 1;
+  max-width: 330px;
+}
+
+/* Common Team Card Styling */
+.mc-team-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 3.5px solid #111827;
+  box-shadow: 6px 6px 0px #000000;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mc-team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 8px 12px 0px #000000;
+}
+
+/* Photo Container with Dark Backdrop & Overflow Clip */
+.mc-team-photo-container {
+  width: 100%;
+  height: 200px;
+  background-color: #18181b;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3.5px solid #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+/* Member Photo: Default Grayscale -> Hover Color + Smooth Zoom Scale */
+.mc-team-photo-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+.mc-team-card:hover .mc-team-photo-img,
+.mc-team-photo-container:hover .mc-team-photo-img {
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+/* Member Info Box */
+.mc-team-info-box {
+  padding: 20px 16px 20px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border-top: 3.5px solid #111827;
+}
+
+.mc-team-member-name {
+  font-family: 'Minecraft', 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: inherit;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.mc-team-role-tag {
+  background-color: #ffffff;
+  color: #111827;
+  font-family: 'Minecraft', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 6px 14px;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* Department Heads 4x2 Grid */
+.mc-dept-heads-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.mc-head-compact-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 3.5px solid #111827;
+  box-shadow: 6px 6px 0px #000000;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mc-head-compact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 8px 12px 0px #000000;
+}
+
+.mc-head-photo-container {
+  width: 100%;
+  height: 160px;
+  background-color: #18181b;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3.5px solid #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.mc-head-photo-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+.mc-head-compact-card:hover .mc-head-photo-img,
+.mc-head-photo-container:hover .mc-head-photo-img {
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+.mc-head-info-box {
+  padding: 16px 12px 16px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-top: 3.5px solid #111827;
+}
+
+.mc-head-member-name {
+  font-family: 'Minecraft', 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  color: inherit;
+  margin: 0;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.mc-head-role-tag {
+  font-family: 'Minecraft', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  background-color: #ffffff;
+  color: #111827;
+  padding: 5px 12px;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+/* SECTION 5: THE VISIONARIES BANNER CARD */
+.mc-visionaries-banner-card {
+  width: 100%;
+  max-width: 1200px;
+  margin: 16px auto 0 auto;
+  padding: 12px;
+  position: relative;
+  background-color: #ffffff;
+  border: 3.5px solid #111827;
+  box-shadow: 8px 8px 0px #000000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mc-visionaries-banner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 10px 14px 0px #000000;
+}
+
+.mc-visionaries-img-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border: 2.5px solid #111827;
+  aspect-ratio: 2.6 / 1;
+  background-color: #18181b;
+}
+
+.mc-visionaries-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition: filter 0.45s ease, transform 0.45s ease;
+}
+
+.mc-visionaries-banner-card:hover .mc-visionaries-img,
+.mc-visionaries-img-wrapper:hover .mc-visionaries-img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.mc-visionaries-badge-tag {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 4;
+  background-color: #fef08a;
+  color: #000000;
+  font-family: 'Minecraft', sans-serif;
+  font-size: clamp(10px, 1.4vw, 15px);
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  text-transform: uppercase;
+}
+
 /* KEYFRAME ANIMATIONS */
 @keyframes pageEntrance {
   0% {
@@ -344,5 +635,44 @@
   .mc-sbmp-desc {
     font-size: 14px;
     line-height: 1.65;
+  }
+
+  .mc-faculty-grid-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .mc-dept-heads-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .mc-visionaries-img-wrapper {
+    aspect-ratio: 1.8 / 1;
+  }
+
+  .mc-visionaries-badge-tag {
+    bottom: 16px;
+    left: 16px;
+    padding: 4px 10px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mc-faculty-grid-top {
+    grid-template-columns: 1fr;
+  }
+
+  .mc-core-leads-grid {
+    flex-direction: column;
+  }
+
+  .mc-dept-heads-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mc-section-header-banner {
+    padding: 8px 16px;
   }
 }
