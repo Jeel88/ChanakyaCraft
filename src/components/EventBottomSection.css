@@ -8,18 +8,13 @@
   overflow: hidden;
   font-family: 'Minecraft', monospace;
   box-sizing: border-box;
+  background-image: url('../assets/images/BackdropWool.png');
+  background-repeat: repeat;
+  background-size: 256px 256px;
 }
 
-.mc-bottom-bg-picture,
-.mc-bottom-bg-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
-  pointer-events: none;
+.mc-bottom-bg-picture {
+  display: none;
 }
 
 .mc-bottom-container {

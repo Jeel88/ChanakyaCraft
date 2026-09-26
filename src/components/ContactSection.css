@@ -1,0 +1,501 @@
+/* Dedicated Contact Us Page Wrapper & Tiled Non-Stretching Dark Wool Backdrop */
+.mc-contact-page-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  padding: 60px 24px 90px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-image: url('../assets/images/BackdropWool.png');
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+.mc-contact-bg-picture {
+  display: none;
+}
+
+/* Container */
+.mc-contact-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Page Header */
+.mc-contact-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mc-contact-badge {
+  display: inline-block;
+  background-color: #388e3c;
+  color: #ffffff;
+  font-family: 'Minecraft', sans-serif;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  padding: 6px 18px;
+  box-shadow:
+    inset -2px -2px 0px #1b5e20,
+    inset 2px 2px 0px #66bb6a,
+    0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.mc-contact-main-title {
+  font-family: 'Minecraft', sans-serif;
+  font-size: clamp(28px, 4.5vw, 48px);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 12px 0;
+  text-shadow:
+    3px 3px 0px #1a1a1a,
+    -1px -1px 0px #555555,
+    0px 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+.mc-contact-subtitle {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  color: #d1d5db;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Common Paper Card Styling */
+.mc-paper-card {
+  background-color: #ffffff;
+  border: 3.5px solid #111827;
+  box-shadow: 8px 8px 0px #000000;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* SECTION 1: Organizing Committee Leads Cards (FIRST) */
+.mc-leads-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mc-leads-header {
+  text-align: left;
+}
+
+.mc-leads-title {
+  font-family: 'Minecraft', sans-serif;
+  font-size: clamp(22px, 3vw, 34px);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 6px 0;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.mc-leads-underline {
+  width: 140px;
+  height: 4px;
+  background-color: #59b335;
+}
+
+.mc-leads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  width: 100%;
+}
+
+.mc-lead-card {
+  padding: 32px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 6px 6px 0px #000000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mc-lead-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.mc-lead-badge {
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  background-color: #388e3c;
+  color: #ffffff;
+  font-family: 'Minecraft', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  text-transform: uppercase;
+}
+
+/* Avatar Frame */
+.mc-lead-avatar-frame {
+  width: 96px;
+  height: 96px;
+  border: 3px solid #111827;
+  background-color: #f3f4f6;
+  box-shadow: 4px 4px 0px #000000;
+  overflow: hidden;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mc-lead-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mc-lead-name {
+  font-family: 'Minecraft', 'Inter', sans-serif;
+  font-size: 20px;
+  color: #111827;
+  letter-spacing: 0.5px;
+  margin: 0 0 4px 0;
+}
+
+.mc-lead-role {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0284c7;
+  margin-bottom: 16px;
+}
+
+.mc-lead-divider {
+  width: 100%;
+  height: 2px;
+  background-color: #e5e7eb;
+  margin-bottom: 16px;
+}
+
+.mc-lead-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.mc-lead-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: #4b5563;
+}
+
+.info-icon {
+  font-size: 14px;
+}
+
+.info-link {
+  color: #111827;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.info-link:hover {
+  color: #0284c7;
+  text-decoration: underline;
+}
+
+/* SECTION 2: Info Card + Mascot Graphic (SECOND) */
+.mc-contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+  width: 100%;
+}
+
+/* Main Info Card */
+.mc-info-card {
+  flex: 1.25;
+  padding: 42px 46px 38px 46px;
+}
+
+/* Top Right Badge */
+.mc-info-badge {
+  position: absolute;
+  top: -18px;
+  right: 24px;
+  background-color: #f59e0b;
+  color: #000000;
+  font-family: 'Minecraft', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  padding: 6px 16px;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  transform: rotate(2.5deg);
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+/* Headlines */
+.mc-info-headline {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: 'Minecraft', 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(22px, 3vw, 38px);
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hl-cyan {
+  color: #0284c7;
+}
+
+.hl-dark {
+  color: #111827;
+}
+
+.hl-green {
+  color: #59b335;
+}
+
+/* Divider Line */
+.mc-info-divider {
+  width: 100%;
+  height: 3.5px;
+  background-color: #111827;
+  margin: 20px 0 24px 0;
+}
+
+/* Contact Details Grid */
+.mc-contact-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.mc-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background-color: #f9fafb;
+  border: 2.5px solid #111827;
+  padding: 16px 18px;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.mc-detail-item:hover {
+  transform: translateY(-2px);
+  background-color: #ffffff;
+}
+
+.mc-detail-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.mc-detail-label {
+  font-family: 'Minecraft', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.mc-detail-value {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.4;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+a.mc-detail-value {
+  color: #0284c7;
+  transition: color 0.15s ease;
+}
+
+a.mc-detail-value:hover {
+  color: #388e3c;
+  text-decoration: underline;
+}
+
+/* MASCOT GRAPHIC WRAPPER (Desktop Only) */
+.mc-contact-mascot-wrapper {
+  flex: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 360px;
+}
+
+.mc-contact-mascot-img {
+  position: relative;
+  z-index: 2;
+  max-width: 270px;
+  max-height: 360px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.75));
+  transition: transform 0.3s ease;
+}
+
+.mc-contact-mascot-wrapper:hover .mc-contact-mascot-img {
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* SECTION 3: Campus Location Sky Blue Block */
+.mc-campus-bottom-block {
+  width: 100%;
+  background-color: #7dd3fc;
+  border: 3.5px solid #111827;
+  box-shadow: 8px 8px 0px #000000;
+  padding: 36px;
+  box-sizing: border-box;
+}
+
+.mc-campus-card {
+  width: 100%;
+  padding: 32px 38px;
+  box-shadow: 6px 6px 0px #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.mc-campus-title {
+  font-family: 'Minecraft', 'Inter', sans-serif;
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+}
+
+.mc-campus-underline {
+  width: 140px;
+  height: 4px;
+  background-color: #111827;
+}
+
+.mc-campus-desc {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #374151;
+  margin: 0;
+}
+
+/* Minecraft Green Google Maps Button */
+.mc-maps-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #388e3c;
+  color: #ffffff;
+  font-family: 'Minecraft', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow:
+    inset -3px -3px 0px #1b5e20,
+    inset 3px 3px 0px #66bb6a,
+    0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.mc-maps-btn:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+  box-shadow:
+    inset -3px -3px 0px #1b5e20,
+    inset 3px 3px 0px #81c784,
+    0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* RESPONSIVE DESIGN FOR TABLETS & MOBILE */
+@media (max-width: 992px) {
+  .mc-contact-page-wrapper {
+    padding: 36px 16px 60px;
+  }
+
+  .mc-contact-container {
+    gap: 32px;
+  }
+
+  .mc-contact-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mc-info-card {
+    width: 100%;
+    padding: 32px 22px 28px 22px;
+  }
+
+  .mc-info-badge {
+    right: 16px;
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+
+  .mc-contact-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hide mascot wrapper on mobile */
+  .mc-contact-mascot-wrapper {
+    display: none !important;
+    min-height: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .mc-leads-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mc-campus-bottom-block {
+    padding: 18px;
+  }
+
+  .mc-campus-card {
+    padding: 22px 18px;
+  }
+}

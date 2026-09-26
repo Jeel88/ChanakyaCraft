@@ -1,4 +1,4 @@
-/* Dedicated About Us Page Wrapper & Dark Wool Backdrop */
+/* Dedicated About Us Page Wrapper & Tiled Non-Stretching Dark Wool Backdrop */
 .mc-about-page-wrapper {
   position: relative;
   width: 100%;
@@ -6,22 +6,13 @@
   padding: 60px 24px 90px;
   overflow: hidden;
   box-sizing: border-box;
+  background-image: url('../assets/images/BackdropWool.png');
+  background-repeat: repeat;
+  background-size: 256px 256px;
 }
 
 .mc-about-bg-picture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.mc-about-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  display: none;
 }
 
 /* Container */

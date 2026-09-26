@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import AboutSection from './components/AboutSection';
+import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -33,7 +34,7 @@ function App() {
         />
         <Route 
           path="/contact" 
-          element={<PlaceholderPage title="Contact Us" description="Have questions or need assistance? Reach out to the ChanakyaCraft organizing committee." />} 
+          element={<ContactSection />} 
         />
         <Route 
           path="/sponsors" 
