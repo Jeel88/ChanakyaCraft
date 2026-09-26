@@ -26,7 +26,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route 
           path="/update" 
-          element={<PlaceholderPage title="Latest Updates" description="Stay tuned for the newest announcements, timeline reveals, and rulebook updates for ChanakyaCraft." />} 
+          element={<PlaceholderPage title="Latest Updates" description="Stay tuned for the newest announcements, timeline reveals, and rulebook updates for Chanakya." />} 
         />
         <Route 
           path="/about" 
@@ -38,11 +38,11 @@ function App() {
         />
         <Route 
           path="/sponsors" 
-          element={<PlaceholderPage title="Our Sponsors" description="Meet the incredible tech partners and sponsors making ChanakyaCraft possible." />} 
+          element={<PlaceholderPage title="Our Sponsors" description="Meet the incredible tech partners and sponsors making Chanakya possible." />} 
         />
         <Route 
           path="/register" 
-          element={<PlaceholderPage title="Register Now" description="Form your squad and register your team for the 36-hour ChanakyaCraft Hackathon!" />} 
+          element={<PlaceholderPage title="Register Now" description="Form your squad and register your team for the 18-hour Chanakya Hackathon!" />} 
         />
       </Routes>
       <Footer />

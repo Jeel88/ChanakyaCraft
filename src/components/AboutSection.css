@@ -24,12 +24,14 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
+  animation: pageEntrance 0.5s ease-out forwards;
 }
 
 /* Page Header */
 .mc-about-header {
   text-align: center;
   margin-bottom: 10px;
+  animation: slideUpCard 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
 }
 
 .mc-about-badge {
@@ -68,6 +70,7 @@
   justify-content: space-between;
   gap: 44px;
   width: 100%;
+  animation: slideUpCard 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
 }
 
 /* Common Paper Card Styling */
@@ -179,11 +182,12 @@
 /* SECTION 2: SBMP & College of Engineering Block Frame */
 .mc-about-bottom-block {
   width: 100%;
-  background-color: #7dd3fc;
+  background-color: #0284c7;
   border: 3.5px solid #111827;
   box-shadow: 8px 8px 0px #000000;
   padding: 36px;
   box-sizing: border-box;
+  animation: slideUpCard 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.22s forwards;
 }
 
 .mc-sbmp-card {
@@ -255,6 +259,31 @@
 
 .mc-sbmp-desc strong {
   color: #0284c7;
+}
+
+/* KEYFRAME ANIMATIONS */
+@keyframes pageEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpCard {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* RESPONSIVE DESIGN FOR TABLETS & MOBILE */

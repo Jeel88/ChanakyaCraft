@@ -31,7 +31,7 @@ export default function Footer() {
         {/* Left Column: Brand & Tagline */}
         <div className="mc-footer-brand-col">
           <Link to="/" className="mc-footer-logo-text">
-            CHANAKYACRAFT
+            CHANAKYA
           </Link>
 
           <p className="mc-footer-tagline">
@@ -49,11 +49,11 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Links Column 2: EVENT (Desktop) */}
+        {/* Links Column 2: FEST (Desktop) */}
         <div className="mc-footer-nav-col">
-          <h4 className="mc-footer-col-title">EVENT</h4>
+          <h4 className="mc-footer-col-title">FEST</h4>
           <ul className="mc-footer-links">
-            <li><Link to="/update">Event Updates</Link></li>
+            <li><Link to="/update">Updates</Link></li>
             <li><Link to="/update#timeline">Timeline</Link></li>
           </ul>
         </div>
@@ -79,7 +79,7 @@ export default function Footer() {
         <div className="mc-footer-mobile-links">
           <Link to="/">Home</Link>
           <Link to="/about">About Us</Link>
-          <Link to="/update">Event Updates</Link>
+          <Link to="/update">Updates</Link>
           <Link to="/sponsors">Sponsors</Link>
           <Link to="/contact">Contact Us</Link>
         </div>
@@ -107,7 +107,7 @@ export default function Footer() {
 
         {/* Bottom Copyright line */}
         <div className="mc-footer-copyright-bottom">
-          © 2026 CHANAKYACRAFT — ALL RIGHTS RESERVED.
+          © 2026 CHANAKYA — ALL RIGHTS RESERVED.
         </div>
 
       </div>

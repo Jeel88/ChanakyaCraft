@@ -25,21 +25,21 @@ export default function AboutSection() {
         {/* Page Title Header */}
         <div className="mc-about-header">
           <div className="mc-about-badge">
-            <span>SVKM'S SBMP — IT DEPT</span>
+            <span>SVKM'S SBMPCOE — IT DEPT</span>
           </div>
           <h1 className="mc-about-main-title">
-            ABOUT CHANAKYACRAFT
+            ABOUT CHANAKYA
           </h1>
         </div>
 
-        {/* SECTION 1: ChanakyaCraft Overview Card + Main Character */}
+        {/* SECTION 1: Chanakya Overview Card + Main Character */}
         <div className="mc-about-row">
 
-          {/* Left Card: CHANAKYACRAFT Overview Card */}
+          {/* Left Card: CHANAKYA Overview Card */}
           <div className="mc-paper-card mc-fest-card">
             {/* Top Right Yellow Badge */}
             <div className="mc-fest-badge">
-              <span>CHANAKYACRAFT</span>
+              <span>CHANAKYA</span>
             </div>
 
             {/* Headline */}
@@ -53,7 +53,7 @@ export default function AboutSection() {
 
             {/* Description Text */}
             <p className="mc-fest-desc">
-              <strong>CHANAKYACRAFT</strong> is the flagship annual technical festival of the Information Technology Department at SVKM's Shri Bhagubhai Mafatlal Polytechnic. It serves as a premier platform where creativity, innovation, and technology converge to empower the next generation of engineers and innovators. CHANAKYACRAFT brings together brilliant minds to collaborate, compete, and showcase their technical prowess through hands-on hackathons and diverse technical challenges.
+              <strong>CHANAKYA</strong> is the flagship annual technical festival of the Information Technology Department at SVKM's Shri Bhagubhai Mafatlal Polytechnic. It serves as a premier platform where creativity, innovation, and technology converge to empower the next generation of engineers and innovators. CHANAKYA brings together brilliant minds to collaborate, compete, and showcase their technical prowess through hands-on hackathons and diverse technical challenges.
             </p>
           </div>
 

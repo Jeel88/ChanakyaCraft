@@ -1,33 +1,67 @@
 import React from 'react';
+import { Phone } from 'lucide-react';
 import backdropWoolWebp from '../assets/images/BackdropWool.webp';
 import backdropWoolPng from '../assets/images/BackdropWool.png';
 import characterPng from '../assets/images/character.png';
 import stevePng from '../assets/images/Steve.png';
-import dogPng from '../assets/images/Dog.png';
+import compassIconPng from '../assets/images/CompassPixel.png';
+import compassIconWebp from '../assets/images/CompassPixel.webp';
 import './ContactSection.css';
+
+// SVG Instagram Icon
+const InstagramIcon = ({ size = 22 }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
+
+// SVG WhatsApp Icon
+const WhatsappIcon = ({ size = 22 }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+  </svg>
+);
 
 export default function ContactSection() {
   const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Shri+Bhagubhai+Mafatlal+Polytechnic+and+College+of+Engineering";
 
-  // Sample contacts array (user can swap out images/details later)
-  const contactLeads = [
+  // 2 Committee Leads data
+  const committeeLeads = [
     {
       id: 1,
-      name: "Event Lead Coordinator",
-      role: "Student President & Management",
-      phone: "+91 98765 43210",
-      email: "contact@chanakyacraft.in",
-      avatar: stevePng,
-      badge: "GENERAL ENQUIRIES"
+      name: "DHREETI SOLANKI",
+      role: "CHAIRPERSON",
+      roleColor: "#f59e0b", // Yellow badge
+      phone: "+91 70397 45708",
+      avatar: characterPng
     },
     {
       id: 2,
-      name: "Technical Hackathon Lead",
-      role: "Problem Statements & Tech Ops",
-      phone: "+91 98765 43211",
-      email: "tech@chanakyacraft.in",
-      avatar: characterPng,
-      badge: "HACKATHON TECH"
+      name: "TATVA JAIN",
+      role: "VICE CHAIRPERSON",
+      roleColor: "#fca5a5", // Peach/Pink badge
+      phone: "+91 90047 06625",
+      avatar: stevePng
     }
   ];
 
@@ -50,163 +84,167 @@ export default function ContactSection() {
         {/* Page Title Header */}
         <div className="mc-contact-header">
           <div className="mc-contact-badge">
-            <span>SVKM'S SBMP — CHANAKYACRAFT</span>
+            <span>SVKM'S SBMPCOE — CHANAKYA</span>
           </div>
           <h1 className="mc-contact-main-title">
             CONTACT US
           </h1>
           <p className="mc-contact-subtitle">
-            Have questions about registration, event schedules, or technical guidelines? Reach out to our organizing team!
+            Have questions about registration, schedules, or technical guidelines? Reach out to our organizing team!
           </p>
         </div>
 
-        {/* SECTION 1: People Face / Organizing Committee Leads (FIRST) */}
-        <div className="mc-leads-section">
-          <div className="mc-leads-header">
-            <h2 className="mc-leads-title">ORGANIZING COMMITTEE LEADS</h2>
-            <div className="mc-leads-underline" />
-          </div>
+        {/* MASTER 2-COLUMN GRID */}
+        <div className="mc-contact-master-grid">
 
-          <div className="mc-leads-grid">
-            {contactLeads.map((lead) => (
-              <div key={lead.id} className="mc-paper-card mc-lead-card">
-                <div className="mc-lead-badge">{lead.badge}</div>
+          {/* LEFT COLUMN: Committee Leads + Campus Location */}
+          <div className="mc-contact-left-col">
 
-                {/* Avatar Image Frame */}
-                <div className="mc-lead-avatar-frame">
-                  <img
-                    src={lead.avatar}
-                    alt={lead.name}
-                    className="mc-lead-avatar-img"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-
-                {/* Lead Information */}
-                <h3 className="mc-lead-name">{lead.name}</h3>
-                <div className="mc-lead-role">{lead.role}</div>
-
-                <div className="mc-lead-divider" />
-
-                <div className="mc-lead-contact-info">
-                  <div className="mc-lead-info-row">
-                    <span className="info-icon">📞</span>
-                    <a href={`tel:${lead.phone}`} className="info-link">{lead.phone}</a>
-                  </div>
-                  <div className="mc-lead-info-row">
-                    <span className="info-icon">✉️</span>
-                    <a href={`mailto:${lead.email}`} className="info-link">{lead.email}</a>
-                  </div>
-                </div>
+            {/* BLOCK 1: COMMITTEE LEADS (Sky Blue Outer Frame with Hover Animation) */}
+            <div className="mc-leads-outer-frame">
+              <div className="mc-frame-header-box">
+                <span>COMMITTEE LEADS</span>
               </div>
-            ))}
-          </div>
-        </div>
 
-        {/* SECTION 2: Contact Information Card + Mascot Graphic (SECOND) */}
-        <div className="mc-contact-row">
+              {/* 2 Side-by-Side Compact Cards */}
+              <div className="mc-leads-horizontal-row">
+                {committeeLeads.map((lead) => (
+                  <div key={lead.id} className="mc-paper-card mc-lead-person-card">
+                    {/* Circular Avatar Frame */}
+                    <div className="mc-circle-avatar-wrapper">
+                      <img
+                        src={lead.avatar}
+                        alt={lead.name}
+                        className="mc-circle-avatar-img"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
 
-          {/* Left Paper Card: Main Contact Info */}
-          <div className="mc-paper-card mc-info-card">
-            {/* Top Right Yellow Badge */}
-            <div className="mc-info-badge">
-              <span>GET IN TOUCH</span>
+                    {/* Name */}
+                    <h3 className="mc-person-name">{lead.name}</h3>
+
+                    {/* Role Badge */}
+                    <div
+                      className="mc-person-role-badge"
+                      style={{ backgroundColor: lead.roleColor }}
+                    >
+                      {lead.role}
+                    </div>
+
+                    {/* Black Phone Action Button (Color unchanged on hover) */}
+                    <a href={`tel:${lead.phone}`} className="mc-black-phone-btn">
+                      <Phone size={14} className="phone-icon-svg" />
+                      <span>{lead.phone}</span>
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Headline */}
-            <div className="mc-info-headline">
-              <span className="hl-cyan">REACH OUT.</span>
-              <span className="hl-dark">WE ARE HERE TO HELP.</span>
-              <span className="hl-green">CONNECT WITH US.</span>
-            </div>
-
-            <div className="mc-info-divider" />
-
-            {/* Contact Details List */}
-            <div className="mc-contact-details-grid">
-              <div className="mc-detail-item">
-                <div className="mc-detail-icon">📧</div>
-                <div className="mc-detail-text">
-                  <div className="mc-detail-label">OFFICIAL EMAIL</div>
-                  <a href="mailto:chanakya.sbmp@gmail.com" className="mc-detail-value">
-                    chanakya.sbmp@gmail.com
-                  </a>
-                </div>
+            {/* BLOCK 2: FEST VENUE LOCATION (Homepage Style Location Box) */}
+            <div className="mc-paper-card mc-campus-block">
+              <div className="mc-campus-badge-tag">
+                <span>FEST VENUE</span>
               </div>
 
-              <div className="mc-detail-item">
-                <div className="mc-detail-icon">📍</div>
-                <div className="mc-detail-text">
-                  <div className="mc-detail-label">VENUE LOCATION</div>
-                  <div className="mc-detail-value">
-                    SVKM's Shri Bhagubhai Mafatlal Polytechnic and College of Engineering, Vile Parle (W), Mumbai - 400056
+              <div className="mc-campus-content-grid">
+                <div className="card-icon-wrapper">
+                  <picture>
+                    <source srcSet={compassIconWebp} type="image/webp" />
+                    <img
+                      src={compassIconPng}
+                      alt="Minecraft Compass"
+                      className="mc-asset-icon compass-icon"
+                      loading="lazy"
+                      decoding="async"
+                      width="68"
+                      height="68"
+                    />
+                  </picture>
+                </div>
+
+                <h3 className="mc-campus-inst-title">
+                  SVKM'S SHRI BHAGUBHAI MAFATLAL POLYTECHNIC & SBMPCOE
+                </h3>
+
+                <p className="mc-campus-subtitle">VILE PARLE (WEST), MUMBAI</p>
+
+                <a
+                  href={googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="location-redirect-tag-cyan"
+                >
+                  <span>OPEN GOOGLE MAPS ↗</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          {/* RIGHT COLUMN: TALL CONNECT HUB BLOCK */}
+          <div className="mc-contact-right-col">
+            <div className="mc-paper-card mc-social-hq-card">
+              {/* Angled Badge */}
+              <div className="mc-wham-badge">
+                <span>CHANAKYA!</span>
+              </div>
+
+              {/* Inner Header Box */}
+              <div className="mc-social-header-box">
+                <span>CONNECT WITH US</span>
+              </div>
+
+              <p className="mc-social-desc">
+                Transmit your signals across the web. We are monitoring all frequencies.
+              </p>
+
+              {/* Action Social Buttons */}
+              <div className="mc-social-btns-stack">
+                {/* Instagram Button */}
+                <a
+                  href="https://www.instagram.com/chanakya_sbmpce"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mc-social-action-btn btn-instagram"
+                >
+                  <div className="btn-left">
+                    <InstagramIcon size={22} />
+                    <span>INSTAGRAM</span>
                   </div>
-                </div>
-              </div>
+                  <span className="btn-arrow">➔</span>
+                </a>
 
-              <div className="mc-detail-item">
-                <div className="mc-detail-icon">📸</div>
-                <div className="mc-detail-text">
-                  <div className="mc-detail-label">INSTAGRAM</div>
-                  <a
-                    href="https://www.instagram.com/chanakya_sbmpce"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mc-detail-value"
-                  >
-                    @chanakya_sbmpce ↗
-                  </a>
-                </div>
-              </div>
-
-              <div className="mc-detail-item">
-                <div className="mc-detail-icon">⏱️</div>
-                <div className="mc-detail-text">
-                  <div className="mc-detail-label">HELP DESK HOURS</div>
-                  <div className="mc-detail-value">
-                    Monday – Saturday: 9:00 AM – 5:00 PM IST
+                {/* WhatsApp Button (Green) */}
+                <a
+                  href="https://wa.me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mc-social-action-btn btn-whatsapp"
+                >
+                  <div className="btn-left">
+                    <WhatsappIcon size={22} />
+                    <span>WHATSAPP</span>
                   </div>
-                </div>
+                  <span className="btn-arrow">➔</span>
+                </a>
               </div>
+
+              {/* Mascot Graphic at bottom of Connect Hub */}
+              <div className="mc-hq-mascot-row">
+                <img
+                  src={characterPng}
+                  alt="Minecraft Mascot"
+                  className="mc-hq-mascot-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
             </div>
           </div>
 
-          {/* Right Mascot Graphic (Hidden on Mobile) */}
-          <div className="mc-contact-mascot-wrapper">
-            <img
-              src={characterPng}
-              alt="Minecraft Character Helper"
-              className="mc-contact-mascot-img"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-
-        </div>
-
-        {/* SECTION 3: Visit Campus / Google Maps Banner Block (THIRD) */}
-        <div className="mc-campus-bottom-block">
-          <div className="mc-paper-card mc-campus-card">
-            <div className="mc-campus-header">
-              <h2 className="mc-campus-title">VISIT OUR CAMPUS</h2>
-              <div className="mc-campus-underline" />
-            </div>
-
-            <p className="mc-campus-desc">
-              SVKM's Shri Bhagubhai Mafatlal Polytechnic and College of Engineering is located in Vile Parle (West), Mumbai — opposite Cooper Hospital. Easy to reach via suburban rail (Vile Parle station) and metro connections.
-            </p>
-
-            <a
-              href={googleMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mc-maps-btn"
-              title="Open Campus Location on Google Maps"
-            >
-              <span>OPEN GOOGLE MAPS ↗</span>
-            </a>
-          </div>
         </div>
 
       </div>

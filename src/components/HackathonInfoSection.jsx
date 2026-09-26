@@ -121,7 +121,7 @@ export default function HackathonInfoSection() {
             {/* Minecraft Theme Header Bar */}
             <div className="mc-modal-header-theme">
               <h3 id="mc-modal-title" className="mc-modal-theme-title">
-                CHANAKYACRAFT HACKATHON
+                CHANAKYA HACKATHON
               </h3>
               <button 
                 className="mc-modal-theme-close-btn"
@@ -140,14 +140,14 @@ export default function HackathonInfoSection() {
               <div className="mc-gold-stat-card">
                 <div className="mc-gold-stat-icon">⚡</div>
                 <div className="mc-gold-stat-text">
-                  <div className="mc-gold-stat-title">CHANAKYACRAFT HACKATHON</div>
+                  <div className="mc-gold-stat-title">CHANAKYA HACKATHON</div>
                   <div className="mc-gold-stat-sub">18 Hours of Intensive Building</div>
                 </div>
               </div>
 
               {/* Main Introduction */}
               <p className="mc-modal-intro-text">
-                The <strong>ChanakyaCraft 18-Hour Hackathon</strong> is designed to inspire creativity, innovation, and problem-solving by bringing together passionate students from diverse technical backgrounds. Over an exciting 18-hour journey, participants will collaborate, design, develop, and present impactful solutions that address real-world challenges.
+                The <strong>Chanakya 18-Hour Hackathon</strong> is designed to inspire creativity, innovation, and problem-solving by bringing together passionate students from diverse technical backgrounds. Over an exciting 18-hour journey, participants will collaborate, design, develop, and present impactful solutions that address real-world challenges.
               </p>
 
               {/* Consists Of Section */}

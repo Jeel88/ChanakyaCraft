@@ -19,7 +19,7 @@ export default function Navbar() {
   // Complete Mobile Hamburger Drawer links (including all removed footer items with unique hash paths)
   const mobileNavLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Event Updates', path: '/update' },
+    { name: 'Updates', path: '/update' },
     { name: 'Timeline', path: '/update#timeline' },
     { name: 'About Us', path: '/about' },
     { name: 'Sponsors', path: '/sponsors' },

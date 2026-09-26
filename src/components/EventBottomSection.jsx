@@ -50,7 +50,7 @@ export default function EventBottomSection() {
         
         {/* Title Header */}
         <div className="mc-news-header">
-          <h2 className="mc-news-title">EVENT DETAILS & LOCATION</h2>
+          <h2 className="mc-news-title">DETAILS & LOCATION</h2>
         </div>
 
         {/* 3 Main Minecraft Feature Cards (Equal Box Sizes) */}
