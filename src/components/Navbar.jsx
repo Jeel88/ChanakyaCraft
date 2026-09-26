@@ -12,19 +12,20 @@ export default function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'Update', path: '/update' },
     { name: 'About Us', path: '/about' },
+    { name: 'FAQ', path: '/faq' },
     { name: 'Contact Us', path: '/contact' },
     { name: 'Sponsors', path: '/sponsors' },
   ];
 
-  // Complete Mobile Hamburger Drawer links (including all removed footer items with unique hash paths)
+  // Complete Mobile Hamburger Drawer links
   const mobileNavLinks = [
     { name: 'Home', path: '/' },
     { name: 'Updates', path: '/update' },
     { name: 'Timeline', path: '/update#timeline' },
     { name: 'About Us', path: '/about' },
+    { name: 'FAQ', path: '/faq' },
     { name: 'Sponsors', path: '/sponsors' },
     { name: 'Gallery', path: '/about#gallery' },
-    { name: 'FAQ', path: '/contact#faq' },
     { name: 'Contact Us', path: '/contact' },
   ];
 

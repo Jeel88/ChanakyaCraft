@@ -25,7 +25,7 @@ export default function AboutSection() {
         {/* Page Title Header */}
         <div className="mc-about-header">
           <div className="mc-about-badge">
-            <span>SVKM'S SBMPCOE — IT DEPT</span>
+            <span>SVKM'S SBMPCOE</span>
           </div>
           <h1 className="mc-about-main-title">
             ABOUT CHANAKYA

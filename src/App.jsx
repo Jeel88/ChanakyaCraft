@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
+import FaqSection from './components/FaqSection';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -35,6 +36,10 @@ function App() {
         <Route 
           path="/contact" 
           element={<ContactSection />} 
+        />
+        <Route 
+          path="/faq" 
+          element={<FaqSection />} 
         />
         <Route 
           path="/sponsors" 
