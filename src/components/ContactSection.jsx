@@ -49,18 +49,18 @@ export default function ContactSection() {
   const committeeLeads = [
     {
       id: 1,
-      name: "DHREETI SOLANKI",
-      role: "CHAIRPERSON",
+      name: "Rahil Shah",
+      role: "Secretary",
       roleColor: "#f59e0b", // Yellow badge
-      phone: "+91 70397 45708",
+      phone: "+91 99999 99999",
       avatar: characterPng
     },
     {
       id: 2,
-      name: "TATVA JAIN",
-      role: "VICE CHAIRPERSON",
+      name: "Jeel Savaliya",
+      role: "Tech Head",
       roleColor: "#fca5a5", // Peach/Pink badge
-      phone: "+91 90047 06625",
+      phone: "+91 99999 99999",
       avatar: stevePng
     }
   ];
