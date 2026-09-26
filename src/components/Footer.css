@@ -1,0 +1,240 @@
+/* Footer.css - Green & White Minecraft Theme Footer */
+
+.mc-footer {
+  position: relative;
+  width: 100%;
+  background-color: #121212;
+  color: #ffffff;
+  border-top: 3px solid #262626;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Top Accent Line - Solid Minecraft Green */
+.mc-footer-top-accent {
+  height: 3px;
+  width: 100%;
+  background-color: #388e3c;
+  box-shadow: 0 0 10px #388e3c;
+}
+
+/* Footer Container */
+.mc-footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 54px 24px 60px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* Left Brand Column */
+.mc-footer-brand-col {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ChanakyaCraft Logo - Pure White in Minecraft Font */
+.mc-footer-logo-text {
+  font-family: 'Minecraft', monospace;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 
+    2px 2px 0px #1b5e20,
+    -1px -1px 0px #000000;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+  user-select: none;
+}
+
+.mc-footer-logo-text:hover {
+  transform: scale(1.02);
+  color: #59b335;
+}
+
+.mc-footer-tagline {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #e5e7eb;
+  margin: 0;
+  font-weight: 500;
+}
+
+.mc-footer-copyright {
+  font-size: 11.5px;
+  letter-spacing: 0.8px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* Nav Link Columns */
+.mc-footer-nav-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+/* Column Titles - Minecraft Green */
+.mc-footer-col-title {
+  font-family: 'Minecraft', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #59b335;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 18px 0;
+  text-shadow: 1px 1px 0px #1b5e20;
+}
+
+.mc-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Links - White text, hovering to Green */
+.mc-footer-links a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+  display: inline-block;
+}
+
+.mc-footer-links a:hover {
+  color: #59b335;
+  transform: translateX(3px);
+}
+
+/* Right Actions Column */
+.mc-footer-actions-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.mc-footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Instagram Social Button - Green Border & White Icon */
+.mc-social-btn-icon {
+  width: 44px;
+  height: 44px;
+  background-color: #1a1a1a;
+  border: 2px solid #388e3c;
+  box-shadow:
+    inset 2px 2px 0px rgba(102, 187, 106, 0.35),
+    3px 3px 0px #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.mc-social-btn-icon:hover {
+  background-color: #388e3c;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 0px #000000;
+}
+
+/* Register Now Button (Green & White Navbar Button Style) */
+.mc-footer-register-btn {
+  background-color: #388e3c;
+  color: #ffffff;
+  font-family: 'Minecraft', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 12px 22px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 
+    inset -3px -3px 0px #1b5e20,
+    inset 3px 3px 0px #66bb6a,
+    0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.12s ease;
+  user-select: none;
+}
+
+.mc-footer-register-btn:hover {
+  background-color: #43a047;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 
+    inset -3px -3px 0px #1b5e20,
+    inset 3px 3px 0px #81c784,
+    0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.mc-footer-register-btn:hover .btn-arrow-icon {
+  transform: translateX(3px);
+}
+
+.mc-footer-register-btn:active {
+  transform: translateY(1px);
+  box-shadow: 
+    inset 3px 3px 0px #1b5e20,
+    inset -3px -3px 0px #66bb6a;
+}
+
+/* Responsive Styles */
+@media (max-width: 960px) {
+  .mc-footer-container {
+    flex-direction: column;
+    gap: 32px;
+    padding: 40px 20px 48px 20px;
+  }
+
+  .mc-footer-brand-col {
+    max-width: 100%;
+  }
+
+  .mc-footer-actions-col {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .mc-footer-social-row {
+    width: 100%;
+  }
+
+  .mc-footer-register-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .mc-footer-nav-col {
+    width: 45%;
+  }
+}

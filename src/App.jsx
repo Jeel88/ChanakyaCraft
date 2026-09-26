@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
+import Footer from './components/Footer';
 import './App.css';
 
 function PlaceholderPage({ title, description }) {
@@ -42,6 +43,7 @@ function App() {
           element={<PlaceholderPage title="Register Now" description="Form your squad and register your team for the 36-hour ChanakyaCraft Hackathon!" />} 
         />
       </Routes>
+      <Footer />
     </div>
   );
 }

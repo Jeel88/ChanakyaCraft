@@ -52,7 +52,7 @@
   grid-template-columns: 1.15fr 0.85fr;
   gap: 40px;
   align-items: center;
-  padding: 150px 60px;
+  padding: 170px 60px;
   box-sizing: border-box;
 }
 
@@ -528,7 +528,7 @@
   .mc-banner-content-overlay {
     grid-template-columns: 1fr;
     gap: 24px;
-    padding: 135px 24px;
+    padding: 150px 24px;
   }
 
   .mc-hackathon-heading {
@@ -572,7 +572,7 @@
   }
 
   .mc-banner-content-overlay {
-    padding: 125px 18px;
+    padding: 150px 18px;
     gap: 20px;
   }
 
