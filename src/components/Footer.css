@@ -12,17 +12,17 @@
 
 /* Top Accent Line - Solid Minecraft Green */
 .mc-footer-top-accent {
-  height: 3px;
+  height: 1px;
   width: 100%;
   background-color: #388e3c;
-  box-shadow: 0 0 10px #388e3c;
+  /* box-shadow: 0 0 10px #388e3c; */
 }
 
 /* Footer Container */
 .mc-footer-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 54px 24px 60px 24px;
+  padding: 54px 24px 40px 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 36px;
@@ -48,7 +48,7 @@
   text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-shadow: 
+  text-shadow:
     2px 2px 0px #1b5e20,
     -1px -1px 0px #000000;
   transition: transform 0.2s ease, color 0.2s ease;
@@ -69,16 +69,7 @@
   font-weight: 500;
 }
 
-.mc-footer-copyright {
-  font-size: 11.5px;
-  letter-spacing: 0.8px;
-  color: #9ca3af;
-  text-transform: uppercase;
-  margin-top: 6px;
-  font-weight: 600;
-}
-
-/* Nav Link Columns */
+/* Desktop Nav Link Columns */
 .mc-footer-nav-col {
   display: flex;
   flex-direction: column;
@@ -119,6 +110,11 @@
 .mc-footer-links a:hover {
   color: #59b335;
   transform: translateX(3px);
+}
+
+/* Compact Mobile Essential Links (Hidden on Desktop) */
+.mc-footer-mobile-links {
+  display: none;
 }
 
 /* Right Actions Column */
@@ -177,7 +173,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 
+  box-shadow:
     inset -3px -3px 0px #1b5e20,
     inset 3px 3px 0px #66bb6a,
     0 4px 8px rgba(0, 0, 0, 0.4);
@@ -189,7 +185,7 @@
   background-color: #43a047;
   color: #ffffff;
   transform: translateY(-1px);
-  box-shadow: 
+  box-shadow:
     inset -3px -3px 0px #1b5e20,
     inset 3px 3px 0px #81c784,
     0 6px 12px rgba(0, 0, 0, 0.5);
@@ -201,21 +197,59 @@
 
 .mc-footer-register-btn:active {
   transform: translateY(1px);
-  box-shadow: 
+  box-shadow:
     inset 3px 3px 0px #1b5e20,
     inset -3px -3px 0px #66bb6a;
 }
 
-/* Responsive Styles */
-@media (max-width: 960px) {
+/* Bottom Copyright Bar */
+.mc-footer-copyright-bottom {
+  width: 100%;
+  font-size: 11.5px;
+  letter-spacing: 0.8px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  /* margin-top: 24px; */
+  padding-top: 16px;
+  border-top: 1px solid #535353;
+  font-weight: 600;
+}
+
+/* Responsive & Mobile Design */
+@media (max-width: 840px) {
   .mc-footer-container {
     flex-direction: column;
-    gap: 32px;
-    padding: 40px 20px 48px 20px;
+    gap: 24px;
+    padding: 36px 20px 32px 20px;
   }
 
   .mc-footer-brand-col {
     max-width: 100%;
+  }
+
+  /* Hide verbose desktop columns on mobile */
+  .mc-footer-nav-col {
+    display: none;
+  }
+
+  /* Show 5 essential compact links on mobile */
+  .mc-footer-mobile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    width: 100%;
+  }
+
+  .mc-footer-mobile-links a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    /* text-decoration: none; */
+    transition: color 0.15s ease;
+  }
+
+  .mc-footer-mobile-links a:hover {
+    color: #59b335;
   }
 
   .mc-footer-actions-col {
@@ -230,11 +264,5 @@
   .mc-footer-register-btn {
     flex: 1;
     justify-content: center;
-  }
-}
-
-@media (max-width: 540px) {
-  .mc-footer-nav-col {
-    width: 45%;
   }
 }

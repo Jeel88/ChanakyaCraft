@@ -7,6 +7,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Desktop primary links
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Update', path: '/update' },
@@ -14,6 +15,27 @@ export default function Navbar() {
     { name: 'Contact Us', path: '/contact' },
     { name: 'Sponsors', path: '/sponsors' },
   ];
+
+  // Complete Mobile Hamburger Drawer links (including all removed footer items with unique hash paths)
+  const mobileNavLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Event Updates', path: '/update' },
+    { name: 'Timeline', path: '/update#timeline' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Sponsors', path: '/sponsors' },
+    { name: 'Gallery', path: '/about#gallery' },
+    { name: 'FAQ', path: '/contact#faq' },
+    { name: 'Contact Us', path: '/contact' },
+  ];
+
+  const currentFullPath = location.pathname + location.hash;
+
+  const isLinkActive = (linkPath) => {
+    if (linkPath.includes('#')) {
+      return currentFullPath === linkPath;
+    }
+    return location.pathname === linkPath && !location.hash;
+  };
 
   return (
     <nav className="minecraft-navbar">
@@ -59,15 +81,15 @@ export default function Navbar() {
 
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu with All Links */}
       {mobileMenuOpen && (
         <div className="mobile-drawer">
           <div className="mobile-nav-links">
-            {navLinks.map((link) => (
+            {mobileNavLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                className={`mobile-nav-link ${isLinkActive(link.path) ? 'active' : ''}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}

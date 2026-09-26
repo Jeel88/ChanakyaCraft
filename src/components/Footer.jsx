@@ -5,14 +5,14 @@ import './Footer.css';
 
 // SVG Instagram Icon
 const InstagramIcon = ({ size = 20 }) => (
-  <svg 
-    width={size} 
-    height={size} 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
     strokeLinejoin="round"
   >
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -27,7 +27,7 @@ export default function Footer() {
       <div className="mc-footer-top-accent" />
 
       <div className="mc-footer-container">
-        
+
         {/* Left Column: Brand & Tagline */}
         <div className="mc-footer-brand-col">
           <Link to="/" className="mc-footer-logo-text">
@@ -37,13 +37,9 @@ export default function Footer() {
           <p className="mc-footer-tagline">
             Flagship technical fest of Information Technology Dept, SVKM's SBMP.
           </p>
-
-          <div className="mc-footer-copyright">
-            © 2026 CHANAKYACRAFT — ALL RIGHTS RESERVED.
-          </div>
         </div>
 
-        {/* Links Column 1: EXPLORE */}
+        {/* Links Column 1: EXPLORE (Desktop) */}
         <div className="mc-footer-nav-col">
           <h4 className="mc-footer-col-title">EXPLORE</h4>
           <ul className="mc-footer-links">
@@ -53,39 +49,47 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Links Column 2: EVENT */}
+        {/* Links Column 2: EVENT (Desktop) */}
         <div className="mc-footer-nav-col">
           <h4 className="mc-footer-col-title">EVENT</h4>
           <ul className="mc-footer-links">
             <li><Link to="/update">Event Updates</Link></li>
-            <li><Link to="/update">Timeline</Link></li>
+            <li><Link to="/update#timeline">Timeline</Link></li>
           </ul>
         </div>
 
-        {/* Links Column 3: COMMUNITY */}
+        {/* Links Column 3: COMMUNITY (Desktop) */}
         <div className="mc-footer-nav-col">
           <h4 className="mc-footer-col-title">COMMUNITY</h4>
           <ul className="mc-footer-links">
-            <li><Link to="/about">Mentors</Link></li>
             <li><Link to="/sponsors">Sponsors</Link></li>
           </ul>
         </div>
 
-        {/* Links Column 4: MEDIA & INFO */}
+        {/* Links Column 4: MEDIA & INFO (Desktop) */}
         <div className="mc-footer-nav-col">
           <h4 className="mc-footer-col-title">MEDIA & INFO</h4>
           <ul className="mc-footer-links">
-            <li><Link to="/about">Gallery</Link></li>
-            <li><Link to="/contact">FAQ</Link></li>
+            <li><Link to="/about#gallery">Gallery</Link></li>
+            <li><Link to="/contact#faq">FAQ</Link></li>
           </ul>
+        </div>
+
+        {/* Compact Essential Mobile Links (Shown on Mobile) */}
+        <div className="mc-footer-mobile-links">
+          <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/update">Event Updates</Link>
+          <Link to="/sponsors">Sponsors</Link>
+          <Link to="/contact">Contact Us</Link>
         </div>
 
         {/* Right Actions Column: Instagram & Register Now */}
         <div className="mc-footer-actions-col">
           <div className="mc-footer-social-row">
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/chanakya_sbmpce"
+              target="_blank"
               rel="noopener noreferrer"
               className="mc-social-btn-icon"
               title="Follow us on Instagram"
@@ -99,6 +103,11 @@ export default function Footer() {
               <ArrowRight size={16} className="btn-arrow-icon" />
             </Link>
           </div>
+        </div>
+
+        {/* Bottom Copyright line */}
+        <div className="mc-footer-copyright-bottom">
+          © 2026 CHANAKYACRAFT — ALL RIGHTS RESERVED.
         </div>
 
       </div>
