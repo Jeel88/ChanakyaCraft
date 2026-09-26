@@ -1,0 +1,485 @@
+/* HackathonInfoSection.css - Fully Responsive Layout & Non-Stretched Backdrop */
+
+.mc-hackathon-sec-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 60px 24px 70px 24px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Background Wool Texture (Dark Backdrop) */
+.mc-hackathon-bg-picture,
+.mc-hackathon-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 100% Width Banner Wrapper */
+.mc-hackathon-banner-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  z-index: 10;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+/* BlockAbovePixels.png Layered Behind Content */
+.mc-banner-base-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Content Positioned ON TOP of BlockAbovePixels */
+.mc-banner-content-overlay {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+  padding: 150px 60px;
+  box-sizing: border-box;
+}
+
+/* Left Side: Content */
+.mc-hackathon-text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mc-hackathon-heading {
+  font-family: 'Minecraft', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.mc-hackathon-desc {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #374151;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  max-width: 580px;
+}
+
+/* Bullet List */
+.mc-hackathon-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mc-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mc-radio-bullet {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #111827;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mc-radio-inner {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #111827;
+  display: block;
+}
+
+.mc-feature-text {
+  font-family: 'Minecraft', 'Inter', monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: 0.5px;
+}
+
+/* Learn More Button */
+.mc-learn-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 6px 0;
+  cursor: pointer;
+  color: #15803d;
+  transition: transform 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+
+.mc-learn-more-btn .btn-arrow {
+  font-size: 18px;
+  font-weight: 900;
+  transition: transform 0.2s ease;
+}
+
+.mc-learn-more-btn .btn-text {
+  font-family: 'Minecraft', monospace;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.mc-learn-more-btn:hover {
+  color: #166534;
+  transform: translateX(4px);
+}
+
+.mc-learn-more-btn:hover .btn-text {
+  border-bottom-color: #166534;
+}
+
+.mc-learn-more-btn:active {
+  transform: translateX(2px);
+}
+
+/* Right Side: Single Photo Only */
+.mc-hackathon-image-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.mc-single-front-img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0px #000000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mc-single-front-img:hover {
+  transform: translateY(-3px);
+  box-shadow: 9px 9px 0px #000000;
+}
+
+/* POPUP MODAL STYLES */
+.mc-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.mc-modal-dialog {
+  background-color: #0c1a26;
+  border: 4px solid #38bdf8;
+  box-shadow:
+    inset 2px 2px 0px rgba(255, 255, 255, 0.25),
+    inset -2px -2px 0px rgba(12, 74, 110, 0.8),
+    10px 10px 0px #000000;
+  max-width: 620px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-family: 'Minecraft', monospace;
+  overflow: hidden;
+  animation: scaleUp 0.22s cubic-bezier(0.18, 0.89, 0.32, 1.25);
+  box-sizing: border-box;
+}
+
+.mc-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background-color: #06111a;
+  border-bottom: 3px solid #1e293b;
+}
+
+.mc-modal-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 1.5px;
+  margin: 0;
+  text-shadow: 2px 2px 0px #082f49;
+}
+
+.mc-modal-close-btn {
+  background: #1e293b;
+  border: 2px solid #38bdf8;
+  color: #ffffff;
+  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #000000;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.mc-modal-close-btn:hover {
+  background-color: #ef4444;
+  border-color: #f87171;
+  color: #ffffff;
+}
+
+.mc-modal-content {
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mc-modal-tag {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: rgba(56, 189, 248, 0.15);
+  border: 1px solid #38bdf8;
+  color: #7dd3fc;
+  font-size: 12px;
+  padding: 4px 10px;
+  letter-spacing: 1px;
+}
+
+.mc-modal-subheading {
+  font-size: 18px;
+  color: #facc15;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0px #713f12;
+}
+
+.mc-modal-text {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.mc-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.mc-modal-card {
+  background-color: #06111a;
+  border: 2px solid #1e293b;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mc-card-label {
+  font-size: 11px;
+  color: #94a3b8;
+  letter-spacing: 1px;
+}
+
+.mc-card-value {
+  font-size: 13px;
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.mc-modal-placeholder-box {
+  background-color: rgba(250, 204, 21, 0.1);
+  border: 1px dashed #facc15;
+  padding: 12px 16px;
+  margin-top: 8px;
+}
+
+.mc-modal-placeholder-box p {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #fef08a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.mc-modal-footer {
+  padding: 16px 24px;
+  background-color: #06111a;
+  border-top: 3px solid #1e293b;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mc-modal-btn-close {
+  background-color: #38bdf8;
+  color: #041f33;
+  border: 2px solid #000000;
+  padding: 10px 24px;
+  font-family: 'Minecraft', monospace;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow:
+    inset -2px -2px 0px #0284c7,
+    inset 2px 2px 0px #bae6fd,
+    3px 3px 0px #000000;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.mc-modal-btn-close:hover {
+  background-color: #7dd3fc;
+  transform: translateY(-2px);
+}
+
+.mc-modal-btn-close:active {
+  transform: translateY(1px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* -------------------------------------------------- */
+/* RESPONSIVE & MOBILE DESIGN */
+/* -------------------------------------------------- */
+
+@media (max-width: 960px) {
+  .mc-hackathon-sec-wrapper {
+    padding: 40px 16px 50px 16px;
+  }
+
+  .mc-banner-base-img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .mc-banner-content-overlay {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 135px 24px;
+  }
+
+  .mc-hackathon-heading {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .mc-hackathon-desc {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .mc-hackathon-feature-list {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .mc-feature-text {
+    font-size: 14px;
+  }
+
+  .mc-learn-more-btn .btn-text {
+    font-size: 16px;
+  }
+
+  .mc-single-front-img {
+    max-width: 100%;
+    max-height: 220px;
+    display: none;
+  }
+
+  .mc-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .mc-hackathon-sec-wrapper {
+    padding: 30px 12px 40px 12px;
+  }
+
+  .mc-banner-content-overlay {
+    padding: 125px 18px;
+    gap: 20px;
+  }
+
+  .mc-hackathon-heading {
+    font-size: 19px;
+  }
+
+  .mc-hackathon-desc {
+    font-size: 13px;
+  }
+
+  .mc-single-front-img {
+    max-height: 180px;
+    display: none;
+  }
+
+  .mc-modal-dialog {
+    max-height: 94vh;
+  }
+}
