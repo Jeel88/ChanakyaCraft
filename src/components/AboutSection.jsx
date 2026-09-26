@@ -165,31 +165,10 @@ export default function AboutSection() {
             <span>FACULTY COORDINATORS</span>
           </div>
 
-          {/* Top Row: 3 Faculty Cards */}
-          <div className="mc-faculty-grid-top">
-            {facultyCoordinators.slice(0, 3).map((faculty) => (
+          {/* Faculty Coordinators Grid (4 Cards) */}
+          <div className="mc-faculty-grid">
+            {facultyCoordinators.map((faculty) => (
               <div key={faculty.id} className="mc-paper-card mc-team-card">
-                <div className="mc-team-photo-container">
-                  <img
-                    src={faculty.avatar}
-                    alt={faculty.name}
-                    className="mc-team-photo-img"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <div className="mc-team-info-box" style={{ backgroundColor: faculty.roleBg, color: faculty.roleColor }}>
-                  <h3 className="mc-team-member-name">{faculty.name}</h3>
-                  <div className="mc-team-role-tag">{faculty.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Bottom Row: 1 Centered Faculty Card */}
-          <div className="mc-faculty-grid-bottom">
-            {facultyCoordinators.slice(3).map((faculty) => (
-              <div key={faculty.id} className="mc-paper-card mc-team-card mc-team-card-center">
                 <div className="mc-team-photo-container">
                   <img
                     src={faculty.avatar}

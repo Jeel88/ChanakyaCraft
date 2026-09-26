@@ -282,25 +282,13 @@
   margin-bottom: 8px;
 }
 
-/* Faculty Grid Top (3 columns) */
-.mc-faculty-grid-top {
+/* Faculty Coordinators Grid (4 Columns) */
+.mc-faculty-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   width: 100%;
-  max-width: 1050px;
-}
-
-/* Faculty Grid Bottom (1 centered card) */
-.mc-faculty-grid-bottom {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.mc-team-card-center {
-  width: 100%;
-  max-width: 330px;
+  max-width: 1200px;
 }
 
 /* Core Leads Grid (2 columns centered) */
@@ -637,7 +625,7 @@
     line-height: 1.65;
   }
 
-  .mc-faculty-grid-top {
+  .mc-faculty-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
@@ -660,16 +648,61 @@
 }
 
 @media (max-width: 576px) {
-  .mc-faculty-grid-top {
+  .mc-faculty-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .mc-core-leads-grid {
     flex-direction: column;
+    width: 100%;
+  }
+
+  .mc-core-leads-grid .mc-team-card {
+    max-width: 100%;
   }
 
   .mc-dept-heads-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .mc-team-info-box {
+    padding: 20px 16px;
+    gap: 10px;
+    min-height: 90px;
+    box-sizing: border-box;
+  }
+
+  .mc-team-member-name {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+  }
+
+  .mc-team-role-tag {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 6px 12px;
+  }
+
+  .mc-head-info-box {
+    padding: 16px 10px;
+    gap: 8px;
+    min-height: 75px;
+    box-sizing: border-box;
+  }
+
+  .mc-head-member-name {
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+  }
+
+  .mc-head-role-tag {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
   }
 
   .mc-section-header-banner {
