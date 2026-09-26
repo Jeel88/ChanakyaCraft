@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroSection from './HeroSection';
-import HackathonInfoSection from './HackathonInfoSection';
 import EventBottomSection from './EventBottomSection';
+import HackathonInfoSection from './HackathonInfoSection';
 
 export default function HomePage() {
   return (

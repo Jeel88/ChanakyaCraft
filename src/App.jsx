@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
+import AboutSection from './components/AboutSection';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -28,7 +29,7 @@ function App() {
         />
         <Route 
           path="/about" 
-          element={<PlaceholderPage title="About Us" description="Learn about ChanakyaCraft, our mission to empower builders, and the team behind the hackathon." />} 
+          element={<AboutSection />} 
         />
         <Route 
           path="/contact" 

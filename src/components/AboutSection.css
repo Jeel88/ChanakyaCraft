@@ -1,0 +1,332 @@
+/* Dedicated About Us Page Wrapper & Dark Wool Backdrop */
+.mc-about-page-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  padding: 60px 24px 90px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.mc-about-bg-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.mc-about-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Container */
+.mc-about-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Page Header */
+.mc-about-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mc-about-badge {
+  display: inline-block;
+  background-color: #388e3c;
+  color: #ffffff;
+  font-family: 'Minecraft', sans-serif;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  padding: 6px 18px;
+  box-shadow:
+    inset -2px -2px 0px #1b5e20,
+    inset 2px 2px 0px #66bb6a,
+    0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.mc-about-main-title {
+  font-family: 'Minecraft', sans-serif;
+  font-size: clamp(28px, 4.5vw, 48px);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow:
+    3px 3px 0px #1a1a1a,
+    -1px -1px 0px #555555,
+    0px 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+/* SECTION 1: Fest Card + Main Character */
+.mc-about-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+  width: 100%;
+}
+
+/* Common Paper Card Styling */
+.mc-paper-card {
+  background-color: #ffffff;
+  border: 3.5px solid #111827;
+  box-shadow: 8px 8px 0px #000000;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Fest Overview Card */
+.mc-fest-card {
+  flex: 1.25;
+  padding: 42px 46px 38px 46px;
+}
+
+/* Top Right Badge */
+.mc-fest-badge {
+  position: absolute;
+  top: -18px;
+  right: 24px;
+  background-color: #f59e0b;
+  color: #000000;
+  font-family: 'Minecraft', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  padding: 6px 16px;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  transform: rotate(2.5deg);
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+/* Headlines */
+.mc-fest-headline {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: 'Minecraft', 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(24px, 3.2vw, 40px);
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hl-cyan {
+  color: #0284c7;
+}
+
+.hl-dark {
+  color: #111827;
+}
+
+.hl-green {
+  color: #59b335;
+}
+
+/* Divider Line */
+.mc-fest-divider {
+  width: 100%;
+  height: 3.5px;
+  background-color: #111827;
+  margin: 20px 0 24px 0;
+}
+
+/* Card Description Text */
+.mc-fest-desc {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #374151;
+  margin: 0;
+}
+
+.mc-fest-desc strong {
+  color: #111827;
+}
+
+/* MAIN MINECRAFT CHARACTER WRAPPER (Desktop Only) */
+.mc-char-wrapper {
+  flex: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 360px;
+}
+
+.mc-char-img {
+  position: relative;
+  z-index: 2;
+  max-width: 270px;
+  max-height: 360px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.75));
+  transition: transform 0.3s ease;
+}
+
+.mc-char-wrapper:hover .mc-char-img {
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* SECTION 2: SBMP & College of Engineering Block Frame */
+.mc-about-bottom-block {
+  width: 100%;
+  background-color: #7dd3fc;
+  border: 3.5px solid #111827;
+  box-shadow: 8px 8px 0px #000000;
+  padding: 36px;
+  box-sizing: border-box;
+}
+
+.mc-sbmp-card {
+  width: 100%;
+  padding: 32px 38px;
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.mc-sbmp-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.mc-sbmp-title {
+  font-family: 'Minecraft', 'Inter', sans-serif;
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  line-height: 1.2;
+}
+
+.mc-sbmp-title-underline {
+  width: 160px;
+  height: 4px;
+  background-color: #111827;
+}
+
+/* PROMINENT DOG GRAPHIC */
+.mc-dog-wrapper {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.mc-dog-img {
+  max-width: 175px;
+  max-height: 140px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 0.65));
+  transition: transform 0.25s ease;
+}
+
+.mc-dog-img:hover {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.mc-sbmp-inner-box {
+  border: 2.5px solid #111827;
+  padding: 24px 28px;
+  background-color: #ffffff;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.mc-sbmp-desc {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #374151;
+  margin: 0;
+}
+
+.mc-sbmp-desc strong {
+  color: #0284c7;
+}
+
+/* RESPONSIVE DESIGN FOR TABLETS & MOBILE */
+@media (max-width: 992px) {
+  .mc-about-page-wrapper {
+    padding: 36px 16px 60px;
+  }
+
+  .mc-about-container {
+    gap: 32px;
+  }
+
+  .mc-about-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mc-fest-card {
+    width: 100%;
+    padding: 32px 22px 28px 22px;
+  }
+
+  .mc-fest-badge {
+    right: 16px;
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+
+  /* Completely remove character wrapper space on mobile */
+  .mc-char-wrapper {
+    display: none !important;
+    min-height: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .mc-about-bottom-block {
+    padding: 18px;
+  }
+
+  .mc-sbmp-card {
+    padding: 22px 18px;
+  }
+
+  .mc-sbmp-header-row {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .mc-sbmp-inner-box {
+    padding: 16px;
+  }
+
+  .mc-dog-img {
+    max-width: 125px;
+    max-height: 100px;
+  }
+
+  .mc-fest-desc,
+  .mc-sbmp-desc {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+}
