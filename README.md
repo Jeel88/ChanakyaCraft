@@ -27,7 +27,7 @@ The website follows a **Minecraft-inspired interactive design**, creating an eng
 * 🤝 **Sponsors** — Information about the sponsors supporting the hackathon.
 * 🏛️ **About the Committee** — Information about the Chanakya Committee and its initiatives.
 * 🎮 **Minecraft Theme** — A themed interface designed to provide an engaging event experience.
-* 🛠️ Tech Stack: React + Vite for the frontend, with Supabase for database and backend service.
+* 🛠️ Tech Stack: React + Vite for the frontend, with Supabase for database and backend services.
 
 
 ### 👨‍💻 Role & Contribution
