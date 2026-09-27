@@ -236,7 +236,7 @@
   font-family: 'Minecraft', monospace;
   font-size: 22px;
   font-weight: 700;
-  color: #38bdf8;
+  color: #ffffff;
   letter-spacing: 1.5px;
   margin: 0;
   text-transform: uppercase;
@@ -245,7 +245,7 @@
 
 .mc-modal-theme-close-btn {
   background: #0f172a;
-  border: 2px solid #38bdf8;
+  border: 2px solid #ffffff;
   color: #ffffff;
   font-size: 16px;
   width: 40px;

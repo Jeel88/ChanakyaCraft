@@ -33,9 +33,9 @@ export default function HackathonInfoSection() {
       {/* Dark Wool Background */}
       <picture className="mc-hackathon-bg-picture">
         <source srcSet={backdropWoolWebp} type="image/webp" />
-        <img 
-          src={backdropWoolPng} 
-          alt="Dark Wool Background" 
+        <img
+          src={backdropWoolPng}
+          alt="Dark Wool Background"
           className="mc-hackathon-bg-img"
           loading="lazy"
           decoding="async"
@@ -44,21 +44,21 @@ export default function HackathonInfoSection() {
 
       {/* 100% Width Banner Wrapper */}
       <div className="mc-hackathon-banner-wrapper">
-        
+
         {/* BlockAbovePixels Image Layered as Backdrop */}
-        <img 
-          src={blockAbovePixelsPng} 
-          alt="Hackathon Pixel Banner" 
+        <img
+          src={blockAbovePixelsPng}
+          alt="Hackathon Pixel Banner"
           className="mc-banner-base-img"
         />
 
         {/* Content Positioned ON TOP of BlockAbovePixels using CSS Positioning */}
         <div className="mc-banner-content-overlay">
-          
+
           {/* Left Side: Content */}
           <div className="mc-hackathon-text-col">
             <h2 className="mc-hackathon-heading">
-              WHAT IS HACKATHON?
+              WHAT IS CHANAKYA'S HACKATHON?
             </h2>
 
             <p className="mc-hackathon-desc">
@@ -82,7 +82,7 @@ export default function HackathonInfoSection() {
             </ul>
 
             {/* Learn More Button */}
-            <button 
+            <button
               className="mc-learn-more-btn"
               onClick={() => setIsModalOpen(true)}
               type="button"
@@ -94,9 +94,9 @@ export default function HackathonInfoSection() {
 
           {/* Right Side: Single Photo */}
           <div className="mc-hackathon-image-col">
-            <img 
-              src={hackathonPhotoPng} 
-              alt="ChanakyaCraft Hackathon Event" 
+            <img
+              src={hackathonPhotoPng}
+              alt="ChanakyaCraft Hackathon Event"
               className="mc-single-front-img"
             />
           </div>
@@ -107,11 +107,11 @@ export default function HackathonInfoSection() {
 
       {/* POPUP MODAL */}
       {isModalOpen && (
-        <div 
+        <div
           className="mc-modal-backdrop"
           onClick={() => setIsModalOpen(false)}
         >
-          <div 
+          <div
             className="mc-modal-dialog"
             onClick={(e) => e.stopPropagation()}
             role="dialog"
@@ -123,7 +123,7 @@ export default function HackathonInfoSection() {
               <h3 id="mc-modal-title" className="mc-modal-theme-title">
                 CHANAKYA HACKATHON
               </h3>
-              <button 
+              <button
                 className="mc-modal-theme-close-btn"
                 onClick={() => setIsModalOpen(false)}
                 aria-label="Close popup modal"
@@ -135,7 +135,7 @@ export default function HackathonInfoSection() {
 
             {/* Light Content Body */}
             <div className="mc-modal-body-light">
-              
+
               {/* Gold Highlight Stat Card */}
               <div className="mc-gold-stat-card">
                 <div className="mc-gold-stat-icon">⚡</div>
@@ -222,14 +222,14 @@ export default function HackathonInfoSection() {
 
             {/* Modal Footer Actions */}
             <div className="mc-modal-footer-light">
-              <Link 
-                to="/register" 
+              <Link
+                to="/register"
                 className="mc-modal-register-btn"
                 onClick={() => setIsModalOpen(false)}
               >
                 JOIN THE HACKATHON
               </Link>
-              <button 
+              <button
                 className="mc-modal-close-btn-style"
                 onClick={() => setIsModalOpen(false)}
                 type="button"
