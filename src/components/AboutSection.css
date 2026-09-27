@@ -302,14 +302,16 @@
 .mc-core-leads-grid {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 24px;
   width: 100%;
   max-width: 700px;
 }
 
 .mc-core-leads-grid .mc-team-card {
-  flex: 1;
-  max-width: 330px;
+  flex: 1 1 250px;
+  max-width: 280px;
+  width: 100%;
 }
 
 /* Common Team Card Styling */
@@ -363,36 +365,45 @@
 
 /* Member Info Box */
 .mc-team-info-box {
-  padding: 20px 16px 20px 16px;
+  flex: 1;
+  padding: 16px 12px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  border-top: 3.5px solid #111827;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
 }
 
 .mc-team-member-name {
   font-family: 'Minecraft', 'Inter', sans-serif;
-  font-size: 22px;
+  font-size: clamp(16px, 3.5vw, 20px);
   font-weight: 900;
   color: inherit;
   margin: 0;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
+  line-height: 1.2;
+  word-break: break-word;
 }
 
 .mc-team-role-tag {
   background-color: #ffffff;
   color: #111827;
   font-family: 'Minecraft', sans-serif;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 800;
-  padding: 6px 14px;
+  padding: 5px 10px;
   border: 2.5px solid #000000;
   box-shadow: 3px 3px 0px #000000;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
+  max-width: calc(100% - 8px);
+  box-sizing: border-box;
+  word-break: break-word;
+  text-align: center;
+  line-height: 1.25;
 }
 
 /* Department Heads 4x2 Grid */
@@ -660,11 +671,14 @@
 
   .mc-core-leads-grid {
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    gap: 16px;
   }
 
   .mc-core-leads-grid .mc-team-card {
-    max-width: 100%;
+    max-width: 280px;
+    width: 100%;
   }
 
   .mc-dept-heads-grid {
@@ -673,22 +687,21 @@
   }
 
   .mc-team-info-box {
-    padding: 20px 16px;
-    gap: 10px;
-    min-height: 90px;
+    padding: 14px 10px;
+    gap: 8px;
     box-sizing: border-box;
   }
 
   .mc-team-member-name {
-    font-size: 22px;
+    font-size: 17px;
     font-weight: 900;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.6px;
   }
 
   .mc-team-role-tag {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
-    padding: 6px 12px;
+    padding: 4px 8px;
   }
 
   .mc-head-info-box {
