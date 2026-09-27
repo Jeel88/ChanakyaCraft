@@ -282,13 +282,20 @@
   margin-bottom: 8px;
 }
 
-/* Faculty Coordinators Grid (4 Columns) */
+/* Faculty Coordinators Grid (Flexible & Centered) */
 .mc-faculty-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 24px;
   width: 100%;
   max-width: 1200px;
+}
+
+.mc-faculty-grid .mc-team-card {
+  flex: 1 1 250px;
+  max-width: 280px;
+  width: 100%;
 }
 
 /* Core Leads Grid (2 columns centered) */
@@ -626,7 +633,6 @@
   }
 
   .mc-faculty-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
@@ -649,7 +655,6 @@
 
 @media (max-width: 576px) {
   .mc-faculty-grid {
-    grid-template-columns: 1fr;
     gap: 16px;
   }
 
