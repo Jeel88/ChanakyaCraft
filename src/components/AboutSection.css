@@ -305,7 +305,7 @@
   flex-wrap: wrap;
   gap: 24px;
   width: 100%;
-  max-width: 700px;
+  /* max-width: 700px; */
 }
 
 .mc-core-leads-grid .mc-team-card {

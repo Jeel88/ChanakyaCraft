@@ -10,7 +10,7 @@ export default function AboutSection() {
   const facultyCoordinators = [
     {
       id: 1,
-      name: "NAME 1",
+      name: "MRS. NEETA G. KADUKAR ",
       role: "HOD & VICE PRINCIPAL",
       roleBg: "#fbbf24", // Yellow badge
       roleColor: "#111827",
@@ -18,7 +18,7 @@ export default function AboutSection() {
     },
     {
       id: 2,
-      name: "NAME 2",
+      name: "MR. Suresh Rajpurohit",
       role: "FACULTY COORDINATOR",
       roleBg: "#0284c7", // Blue badge
       roleColor: "#ffffff",
@@ -46,32 +46,45 @@ export default function AboutSection() {
   const coreLeads = [
     {
       id: 1,
-      name: "NAME 1",
-      role: "CHAIRPERSON",
+      name: "Jay Devgania",
+      role: "PRESIDENT",
       roleBg: "#fbbf24", // Yellow badge
       roleColor: "#111827",
       avatar: characterPng
     },
     {
       id: 2,
-      name: "NAME 2",
-      role: "VICE CHAIRPERSON",
+      name: "Shiv Kumbhar",
+      role: "VICE PRESIDENT",
       roleBg: "#0284c7", // Blue badge
       roleColor: "#ffffff",
       avatar: stevePng
-    }
+    },
+    {
+      id: 3,
+      name: "Rahil Shah",
+      role: "SECRETARY",
+      roleBg: "#fbbf24", // Yellow badge
+      roleColor: "#111827",
+      avatar: characterPng
+    },
   ];
 
-  // Department Heads Data (8 Members)
+  // Department Heads Data
   const departmentHeads = [
-    { id: 1, name: "NAME 1", role: "TECHNICAL HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
-    { id: 2, name: "NAME 2", role: "SPONSORSHIP HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: characterPng },
-    { id: 3, name: "NAME 3", role: "SPONSORSHIP HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
-    { id: 4, name: "NAME 4", role: "FINANCE HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: stevePng },
-    { id: 5, name: "NAME 5", role: "MANAGEMENT HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
-    { id: 6, name: "NAME 6", role: "DESIGN HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: characterPng },
-    { id: 7, name: "NAME 7", role: "SOCIAL MEDIA HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: characterPng },
-    { id: 8, name: "NAME 8", role: "SECURITY HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: stevePng }
+    { id: 1, name: "Jeel Savaliya", role: "TECHNICAL HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
+    { id: 2, name: "Jay Metha", role: "TECH SUPPORT HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: characterPng },
+    { id: 3, name: "Preet Dudhat", role: "TECH SUPPORT HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
+    { id: 4, name: "Aryan Jevani", role: "LOGISTICS AND SECURITY HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
+    { id: 5, name: "Yug Moradiya", role: "FINANCE HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: characterPng },
+    { id: 6, name: "Yug Shah", role: "SPONSORSHIP HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: characterPng },
+    { id: 7, name: "Khushi Patel", role: "CREATIVE HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
+    { id: 8, name: "Paran Vasa", role: "CREATIVE HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: characterPng },
+    { id: 9, name: "Yash Parmar", role: "CREATIVE HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
+    { id: 10, name: "Mann Lodaliya", role: "SOCIAL MEDIA HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: characterPng },
+    { id: 11, name: "Aanya Ghelani", role: "SOCIAL MEDIA HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
+    { id: 12, name: "Kevin Mendapara", role: "MARKETING & PR HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: characterPng },
+    { id: 13, name: "Dev Chande", role: "LOGISTICS SUPPORT HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng }
   ];
 
   return (
