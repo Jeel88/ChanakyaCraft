@@ -56,7 +56,7 @@ export default function ContactSection() {
       name: "Rahil Shah",
       role: "Secretary",
       roleColor: "#fbbf24", // Yellow badge
-      phone: "+91 99999 99999",
+      phone: "+91 93246 50577",
       avatar: RahilS
     },
     {
@@ -64,7 +64,7 @@ export default function ContactSection() {
       name: "Jeel Savaliya",
       role: "Tech Head",
       roleColor: "#0284c7", // Blue badge
-      phone: "+91 99999 99999",
+      phone: "+91 98200 09280",
       avatar: jeelPhoto
     }
   ];
