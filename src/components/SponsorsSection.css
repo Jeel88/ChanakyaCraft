@@ -1,0 +1,285 @@
+/* Dedicated Sponsors Page Wrapper & Tiled Dark Wool Backdrop */
+.mc-sponsor-page-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  padding: 60px 24px 90px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-image: url('../assets/images/BackdropWool.png');
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+.mc-sponsor-container {
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* Page Header Section */
+.mc-sponsor-header {
+  text-align: center;
+}
+
+.mc-sponsor-badge {
+  display: inline-block;
+  background-color: #388e3c;
+  color: #ffffff;
+  font-family: 'Minecraft', sans-serif;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  padding: 6px 18px;
+  box-shadow:
+    inset -2px -2px 0px #1b5e20,
+    inset 2px 2px 0px #66bb6a,
+    0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.mc-sponsor-main-title {
+  font-family: 'Minecraft', sans-serif;
+  font-size: clamp(28px, 4.5vw, 48px);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 10px 0;
+  text-shadow:
+    3px 3px 0px #111827,
+    -1px -1px 0px #374151,
+    0px 6px 14px rgba(0, 0, 0, 0.9);
+}
+
+.mc-sponsor-subtitle {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: clamp(14px, 2vw, 15px);
+  color: #d1d5db;
+  max-width: 680px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+/* Visible Crisp Minecraft Green Divider Line */
+.mc-sponsor-divider-line {
+  width: 100%;
+  max-width: 640px;
+  height: 3.5px;
+  background-color: #388e3c;
+  border-bottom: 2px solid #111827;
+  box-shadow: 0px 4px 0px #000000;
+  margin: 0 auto;
+}
+
+/* Master Sponsor Grid */
+.mc-sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 1024px) {
+  .mc-sponsor-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 680px) {
+  .mc-sponsor-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Sponsor Paper Card in ChanakyaCraft Theme */
+.mc-sponsor-paper-card {
+  background-color: #ffffff;
+  border: 3.5px solid #111827;
+  box-shadow: 7px 7px 0px #000000;
+  position: relative;
+  box-sizing: border-box;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.mc-sponsor-paper-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0px #000000;
+  border-color: #388e3c;
+}
+
+/* Purely Visible Logo Container Box */
+.mc-sponsor-logo-box {
+  width: 100%;
+  height: 110px;
+  background-color: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.mc-sponsor-logo-img {
+  max-width: 85%;
+  max-height: 80%;
+  object-fit: contain;
+  display: block;
+}
+
+.mc-sponsor-fallback-name {
+  color: #111827;
+  font-family: 'Minecraft', sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+
+.mc-sponsor-card-title {
+  font-family: 'Minecraft', sans-serif;
+  color: #111827;
+  font-size: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.8px;
+}
+
+.mc-sponsor-card-desc {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 22px 0;
+  flex: 1;
+}
+
+/* Actions Row: Visit Website & Call Us */
+.mc-sponsor-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.mc-btn-visit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #0284c7;
+  color: #ffffff;
+  border: 2px solid #111827;
+  box-shadow: 3px 3px 0px #000000;
+  font-family: 'Minecraft', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  text-decoration: none;
+  flex: 1;
+  transition: transform 0.1s ease;
+}
+
+.mc-btn-visit:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000000;
+  background-color: #0369a1;
+}
+
+.mc-btn-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #388e3c;
+  color: #ffffff;
+  border: 2px solid #111827;
+  box-shadow: 3px 3px 0px #000000;
+  font-family: 'Minecraft', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  text-decoration: none;
+  flex: 1;
+  transition: transform 0.1s ease;
+}
+
+.mc-btn-call:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000000;
+  background-color: #2e7d32;
+}
+
+/* Call Banner Container */
+.mc-sponsor-call-banner {
+  background-color: #ffffff;
+  border: 3.5px solid #111827;
+  box-shadow: 8px 8px 0px #000000;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.mc-sponsor-call-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mc-call-award-icon {
+  color: #f59e0b;
+}
+
+.mc-call-banner-title {
+  font-family: 'Minecraft', sans-serif;
+  color: #111827;
+  font-size: 19px;
+  margin: 0 0 4px 0;
+}
+
+.mc-call-banner-desc {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #4b5563;
+  font-size: 14px;
+  margin: 0;
+}
+
+.mc-call-now-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #388e3c;
+  color: #ffffff;
+  border: 2.5px solid #111827;
+  box-shadow: 4px 4px 0px #000000;
+  font-family: 'Minecraft', sans-serif;
+  font-size: 13px;
+  padding: 10px 20px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: transform 0.1s ease;
+}
+
+.mc-call-now-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #000000;
+  background-color: #2e7d32;
+}

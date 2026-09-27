@@ -5,6 +5,8 @@ import HomePage from './components/HomePage';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import FaqSection from './components/FaqSection';
+import MemoriesSection from './components/MemoriesSection';
+import SponsorsSection from './components/SponsorsSection';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -53,8 +55,16 @@ function App() {
           element={<FaqSection />} 
         />
         <Route 
+          path="/memories" 
+          element={<MemoriesSection />} 
+        />
+        <Route 
+          path="/gallery" 
+          element={<MemoriesSection />} 
+        />
+        <Route 
           path="/sponsors" 
-          element={<PlaceholderPage title="Our Sponsors" description="Meet the incredible tech partners and sponsors making Chanakya possible." />} 
+          element={<SponsorsSection />} 
         />
         <Route 
           path="/register" 

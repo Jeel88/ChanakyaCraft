@@ -1,31 +1,29 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight, Menu, X, Home, Bell, Clock, Info, HelpCircle, Award, Image, Phone } from 'lucide-react';
+import { ArrowRight, Menu, X, Home, Bell, Clock, Info, Award, Image, Phone } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Desktop primary links
+  // Desktop primary links (No Gallery on Desktop)
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Update', path: '/update' },
     { name: 'About Us', path: '/about' },
-    { name: 'FAQ', path: '/faq' },
     { name: 'Contact Us', path: '/contact' },
     { name: 'Sponsors', path: '/sponsors' },
   ];
 
-  // Complete Mobile Hamburger Drawer links with white icons
+  // Mobile Hamburger Drawer links
   const mobileNavLinks = [
     { name: 'Home', path: '/', icon: Home },
     { name: 'Updates', path: '/update', icon: Bell },
     { name: 'Timeline', path: '/update#timeline', icon: Clock },
     { name: 'About Us', path: '/about', icon: Info },
-    { name: 'FAQ', path: '/faq', icon: HelpCircle },
+    { name: 'Gallery', path: '/gallery', icon: Image },
     { name: 'Sponsors', path: '/sponsors', icon: Award },
-    { name: 'Gallery', path: '/about#gallery', icon: Image },
     { name: 'Contact Us', path: '/contact', icon: Phone },
   ];
 
@@ -82,7 +80,7 @@ export default function Navbar() {
 
       </div>
 
-      {/* Mobile Drawer Menu with All Links & White Icons */}
+      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
         <div className="mobile-drawer">
           <div className="mobile-nav-links">

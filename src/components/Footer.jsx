@@ -70,7 +70,7 @@ export default function Footer() {
         <div className="mc-footer-nav-col">
           <h4 className="mc-footer-col-title">MEDIA & INFO</h4>
           <ul className="mc-footer-links">
-            <li><Link to="/about#gallery">Gallery</Link></li>
+            <li><Link to="/gallery">Gallery</Link></li>
             <li><Link to="/faq">FAQ</Link></li>
           </ul>
         </div>
@@ -79,9 +79,9 @@ export default function Footer() {
         <div className="mc-footer-mobile-links">
           <Link to="/">Home</Link>
           <Link to="/about">About Us</Link>
-          <Link to="/faq">FAQ</Link>
-          <Link to="/update">Updates</Link>
+          <Link to="/gallery">Gallery</Link>
           <Link to="/sponsors">Sponsors</Link>
+          <Link to="/faq">FAQ</Link>
           <Link to="/contact">Contact Us</Link>
         </div>
 
