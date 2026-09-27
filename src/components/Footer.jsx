@@ -35,7 +35,7 @@ export default function Footer() {
           </Link>
 
           <p className="mc-footer-tagline">
-            Flagship technical fest of Information Technology Dept, SVKM's SBMP.
+            Flagship Hackathon of Chanakya Committee, SVKM's SBMPCOE.
           </p>
         </div>
 
