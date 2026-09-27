@@ -37,9 +37,9 @@ export default function EventBottomSection() {
       {/* Background Image with HTML Lazy Loading */}
       <picture className="mc-bottom-bg-picture">
         <source srcSet={backdropWoolWebp} type="image/webp" />
-        <img 
-          src={backdropWoolPng} 
-          alt="Backdrop Wool Texture" 
+        <img
+          src={backdropWoolPng}
+          alt="Backdrop Wool Texture"
           className="mc-bottom-bg-img"
           loading="lazy"
           decoding="async"
@@ -47,7 +47,7 @@ export default function EventBottomSection() {
       </picture>
 
       <div className="mc-bottom-container">
-        
+
         {/* Title Header */}
         <div className="mc-news-header">
           <h2 className="mc-news-title">DETAILS & LOCATION</h2>
@@ -59,14 +59,14 @@ export default function EventBottomSection() {
           {/* CARD 1: DATES (Blue Cyan Glass Theme with Sword Icon) */}
           <div className="mc-feature-card card-blue-glass">
             <MinecraftGlassCornerShines />
-            
+
             <div className="card-icon-wrapper">
               <picture>
                 <source srcSet={swordIconWebp} type="image/webp" />
-                <img 
-                  src={swordIconPng} 
-                  alt="Minecraft Sword" 
-                  className="mc-asset-icon sword-icon" 
+                <img
+                  src={swordIconPng}
+                  alt="Minecraft Sword"
+                  className="mc-asset-icon sword-icon"
                   loading="lazy"
                   decoding="async"
                   width="88"
@@ -85,10 +85,10 @@ export default function EventBottomSection() {
             <div className="card-icon-wrapper">
               <picture>
                 <source srcSet={goldIconWebp} type="image/webp" />
-                <img 
-                  src={goldIconPng} 
-                  alt="Minecraft Gold" 
-                  className="mc-asset-icon gold-icon" 
+                <img
+                  src={goldIconPng}
+                  alt="Minecraft Gold"
+                  className="mc-asset-icon gold-icon"
                   loading="lazy"
                   decoding="async"
                   width="84"
@@ -97,11 +97,11 @@ export default function EventBottomSection() {
               </picture>
             </div>
             <h3 className="card-main-title text-gold">PRIZE POOL</h3>
-            <p className="card-sub-title prize-highlight-gold">UP TO ₹50K IN PRIZES</p>
+            <p className="card-sub-title prize-highlight-gold">₹50K WORTH OF PRIZES</p>
           </div>
 
           {/* CARD 3: LOCATION (Blue Cyan Glass Theme with Compass Icon & Google Maps Redirect) */}
-          <a 
+          <a
             href={googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -109,14 +109,14 @@ export default function EventBottomSection() {
             title="Click to view location on Google Maps"
           >
             <MinecraftGlassCornerShines />
-            
+
             <div className="card-icon-wrapper">
               <picture>
                 <source srcSet={compassIconWebp} type="image/webp" />
-                <img 
-                  src={compassIconPng} 
-                  alt="Minecraft Compass" 
-                  className="mc-asset-icon compass-icon" 
+                <img
+                  src={compassIconPng}
+                  alt="Minecraft Compass"
+                  className="mc-asset-icon compass-icon"
                   loading="lazy"
                   decoding="async"
                   width="84"
@@ -128,7 +128,7 @@ export default function EventBottomSection() {
               SHRI BHAGUBHAI MAFATLAL AND COLLEGE OF ENGINEERING
             </h3>
             <p className="card-sub-title text-cyan-sub">VILE PARLE</p>
-            
+
             <div className="location-redirect-tag-cyan">
               <span>OPEN GOOGLE MAPS ↗</span>
             </div>
