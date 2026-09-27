@@ -418,11 +418,12 @@
 .mc-head-compact-card {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: #18181b;
   border: 3.5px solid #111827;
   box-shadow: 6px 6px 0px #000000;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .mc-head-compact-card:hover {
@@ -462,36 +463,47 @@
 }
 
 .mc-head-info-box {
-  padding: 16px 12px 16px 12px;
+  flex: 1;
+  width: 100%;
+  padding: 14px 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  border-top: 3.5px solid #111827;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
 }
 
 .mc-head-member-name {
   font-family: 'Minecraft', 'Inter', sans-serif;
-  font-size: 17px;
+  font-size: clamp(14px, 3.5vw, 17px);
   font-weight: 900;
   color: inherit;
   margin: 0;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
+  line-height: 1.2;
+  word-break: break-word;
+  text-align: center;
 }
 
 .mc-head-role-tag {
   font-family: 'Minecraft', sans-serif;
-  font-size: 11px;
+  font-size: clamp(9.5px, 2.5vw, 11px);
   font-weight: 800;
   background-color: #ffffff;
   color: #111827;
-  padding: 5px 12px;
+  padding: 5px 8px;
   border: 2px solid #000000;
   box-shadow: 2px 2px 0px #000000;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
+  max-width: calc(100% - 4px);
+  box-sizing: border-box;
+  word-break: break-word;
+  text-align: center;
+  line-height: 1.25;
 }
 
 /* SECTION 5: THE VISIONARIES BANNER CARD */
@@ -705,22 +717,29 @@
   }
 
   .mc-head-info-box {
-    padding: 16px 10px;
-    gap: 8px;
-    min-height: 75px;
+    flex: 1;
+    width: 100%;
+    padding: 12px 6px;
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
   }
 
   .mc-head-member-name {
-    font-size: 15px;
+    font-size: clamp(13px, 3.6vw, 15px);
     font-weight: 900;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
+    line-height: 1.2;
   }
 
   .mc-head-role-tag {
-    font-size: 11px;
+    font-size: clamp(9px, 2.7vw, 10.5px);
     font-weight: 800;
-    padding: 4px 10px;
+    padding: 4px 6px;
+    letter-spacing: 0.4px;
   }
 
   .mc-section-header-banner {
