@@ -24,22 +24,22 @@ export default function AboutSection() {
       roleColor: "#ffffff",
       avatar: stevePng
     },
-    {
-      id: 3,
-      name: "NAME 3",
-      role: "FACULTY COORDINATOR",
-      roleBg: "#fbbf24", // Yellow badge
-      roleColor: "#111827",
-      avatar: characterPng
-    },
-    {
-      id: 4,
-      name: "NAME 4",
-      role: "FACULTY COORDINATOR",
-      roleBg: "#0284c7", // Blue badge
-      roleColor: "#ffffff",
-      avatar: stevePng
-    }
+    // {
+    //   id: 3,
+    //   name: "NAME 3",
+    //   role: "FACULTY COORDINATOR",
+    //   roleBg: "#fbbf24", // Yellow badge
+    //   roleColor: "#111827",
+    //   avatar: characterPng
+    // },
+    // {
+    //   id: 4,
+    //   name: "NAME 4",
+    //   role: "FACULTY COORDINATOR",
+    //   roleBg: "#0284c7", // Blue badge
+    //   roleColor: "#ffffff",
+    //   avatar: stevePng
+    // }
   ];
 
   // Core Team Leads Data
