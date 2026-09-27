@@ -22,7 +22,7 @@ export default function FaqSection() {
     {
       id: 3,
       question: 'What is Chanakya and what happens during the event?',
-      answer: "Chanakya is the flagship annual technical festival organized by the IT Department at SVKM's Shri Bhagubhai Mafatlal Polytechnic and College of Engineering. It features an intensive 18-Hour Hackathon, project showcases, and technical competitions."
+      answer: "Chanakya is an 18-hour Industry-cum-Hackathon, not a typical hackathon. Teams don't just build: they pitch what they build as a startup to a panel of real industry judges. Problem statements are drawn directly from real-time projects contributed by industry experts, so teams solve problems that actually matter."
     },
     {
       id: 4,

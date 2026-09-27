@@ -6,8 +6,10 @@ import hackathonPhotoPng from '../assets/images/HackathonSecphoto.png';
 import './AboutSection.css';
 import jeelPhoto from '../assets/images/JeelS.jpeg';
 import RahilS from '../assets/images/RahilS.jpeg';
+import JayD from '../assets/images/JayGs.jpeg';
 
 import NeetaK from '../assets/images/NeetaK.jpeg';
+import MZShaikh from '../assets/images/MZShaikh.jpeg';
 
 // SIMPLY IMPORT YOUR MEMBER PHOTOS HERE (Supports .jpeg, .jpg, .png, .webp):
 // Example:
@@ -20,14 +22,22 @@ export default function AboutSection() {
   const facultyCoordinators = [
     {
       id: 1,
+      name: "Dr. M. Z. Shaikh ",
+      role: "PRINCIPAL",
+      roleBg: "#fbbf24", // Yellow badge
+      roleColor: "#111827",
+      avatar: MZShaikh // Replace with imported photo variable (e.g. neetaPhoto)
+    },
+    {
+      id: 2,
       name: "MRS. NEETA G. KADUKAR ",
-      role: "HOD & VICE PRINCIPAL",
+      role: "VICE PRINCIPAL",
       roleBg: "#fbbf24", // Yellow badge
       roleColor: "#111827",
       avatar: NeetaK // Replace with imported photo variable (e.g. neetaPhoto)
     },
     {
-      id: 2,
+      id: 3,
       name: "MR. Suresh Rajpurohit",
       role: "FACULTY COORDINATOR",
       roleBg: "#0284c7", // Blue badge
@@ -44,7 +54,7 @@ export default function AboutSection() {
       role: "PRESIDENT",
       roleBg: "#fbbf24", // Yellow badge
       roleColor: "#111827",
-      avatar: characterPng
+      avatar: JayD
     },
     {
       id: 2,
