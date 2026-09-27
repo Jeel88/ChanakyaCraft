@@ -298,6 +298,26 @@
   width: 100%;
 }
 
+/* Faculty Photos: No stretching/cropping (contain) and no zoom scale on hover */
+.mc-faculty-grid .mc-team-photo-container {
+  /* padding: 8px; */
+}
+
+.mc-faculty-grid .mc-team-photo-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transform: none !important;
+}
+
+.mc-faculty-grid .mc-team-card:hover .mc-team-photo-img,
+.mc-faculty-grid .mc-team-photo-container:hover .mc-team-photo-img {
+  filter: grayscale(0%);
+  transform: none !important;
+}
+
 /* Core Leads Grid (2 columns centered) */
 .mc-core-leads-grid {
   display: flex;
@@ -341,17 +361,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 0;
   box-sizing: border-box;
 }
 
 /* Member Photo: Default Grayscale -> Hover Color + Smooth Zoom Scale */
 .mc-team-photo-img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-position: center top; */
   filter: grayscale(100%);
   transform: scale(1);
   transition: filter 0.35s ease, transform 0.35s ease;
@@ -441,16 +460,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 0;
   box-sizing: border-box;
 }
 
 .mc-head-photo-img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-position: center top; */
   filter: grayscale(100%);
   transform: scale(1);
   transition: filter 0.35s ease, transform 0.35s ease;

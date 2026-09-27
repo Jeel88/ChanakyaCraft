@@ -4,6 +4,16 @@ import stevePng from '../assets/images/Steve.png';
 import dogPng from '../assets/images/Dog.png';
 import hackathonPhotoPng from '../assets/images/HackathonSecphoto.png';
 import './AboutSection.css';
+import jeelPhoto from '../assets/images/JeelS.jpeg';
+import RahilS from '../assets/images/RahilS.jpeg';
+
+import NeetaK from '../assets/images/NeetaK.jpeg';
+
+// SIMPLY IMPORT YOUR MEMBER PHOTOS HERE (Supports .jpeg, .jpg, .png, .webp):
+// Example:
+// import neetaPhoto from '../assets/images/neeta.jpeg';
+// import sureshPhoto from '../assets/images/suresh.jpg';
+// import jeelPhoto from '../assets/images/jeel.jpeg';
 
 export default function AboutSection() {
   // Faculty Coordinators Data
@@ -14,7 +24,7 @@ export default function AboutSection() {
       role: "HOD & VICE PRINCIPAL",
       roleBg: "#fbbf24", // Yellow badge
       roleColor: "#111827",
-      avatar: characterPng
+      avatar: NeetaK // Replace with imported photo variable (e.g. neetaPhoto)
     },
     {
       id: 2,
@@ -22,24 +32,8 @@ export default function AboutSection() {
       role: "FACULTY COORDINATOR",
       roleBg: "#0284c7", // Blue badge
       roleColor: "#ffffff",
-      avatar: stevePng
+      avatar: stevePng // Replace with imported photo variable (e.g. sureshPhoto)
     },
-    // {
-    //   id: 3,
-    //   name: "NAME 3",
-    //   role: "FACULTY COORDINATOR",
-    //   roleBg: "#fbbf24", // Yellow badge
-    //   roleColor: "#111827",
-    //   avatar: characterPng
-    // },
-    // {
-    //   id: 4,
-    //   name: "NAME 4",
-    //   role: "FACULTY COORDINATOR",
-    //   roleBg: "#0284c7", // Blue badge
-    //   roleColor: "#ffffff",
-    //   avatar: stevePng
-    // }
   ];
 
   // Core Team Leads Data
@@ -66,13 +60,13 @@ export default function AboutSection() {
       role: "SECRETARY",
       roleBg: "#fbbf24", // Yellow badge
       roleColor: "#111827",
-      avatar: characterPng
+      avatar: RahilS
     },
   ];
 
   // Department Heads Data
   const departmentHeads = [
-    { id: 1, name: "Jeel Savaliya", role: "TECHNICAL HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
+    { id: 1, name: "Jeel Savaliya", role: "TECHNICAL HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: jeelPhoto },
     { id: 2, name: "Jay Metha", role: "TECH SUPPORT HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: characterPng },
     { id: 3, name: "Preet Dudhat", role: "TECH SUPPORT HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
     { id: 4, name: "Yug Moradiya", role: "FINANCE HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: characterPng },
@@ -178,7 +172,7 @@ export default function AboutSection() {
             <span>FACULTY COORDINATORS</span>
           </div>
 
-          {/* Faculty Coordinators Grid (4 Cards) */}
+          {/* Faculty Coordinators Grid */}
           <div className="mc-faculty-grid">
             {facultyCoordinators.map((faculty) => (
               <div key={faculty.id} className="mc-paper-card mc-team-card">
@@ -206,7 +200,7 @@ export default function AboutSection() {
             <span>MEET THE CORE TEAM</span>
           </div>
 
-          {/* Core Leads (Dhreeti Solanki & Tatva Jain) */}
+          {/* Core Leads */}
           <div className="mc-core-leads-grid">
             {coreLeads.map((lead) => (
               <div key={lead.id} className="mc-paper-card mc-team-card">
@@ -227,7 +221,7 @@ export default function AboutSection() {
             ))}
           </div>
 
-          {/* Department Heads (4x2 Responsive Grid) */}
+          {/* Department Heads Grid */}
           <div className="mc-dept-heads-grid">
             {departmentHeads.map((head) => (
               <div key={head.id} className="mc-paper-card mc-head-compact-card">
