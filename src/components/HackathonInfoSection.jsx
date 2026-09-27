@@ -58,7 +58,7 @@ export default function HackathonInfoSection() {
           {/* Left Side: Content */}
           <div className="mc-hackathon-text-col">
             <h2 className="mc-hackathon-heading">
-              WHAT IS CHANAKYA'S HACKATHON?
+              WHAT IS CHANAKYA HACKATHON?
             </h2>
 
             <p className="mc-hackathon-desc">
