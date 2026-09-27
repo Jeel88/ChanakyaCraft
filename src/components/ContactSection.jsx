@@ -8,6 +8,10 @@ import compassIconPng from '../assets/images/CompassPixel.png';
 import compassIconWebp from '../assets/images/CompassPixel.webp';
 import './ContactSection.css';
 
+// SIMPLY IMPORT YOUR MEMBER PHOTOS HERE (Supports .jpeg, .jpg, .png, .webp):
+import RahilS from '../assets/images/RahilS.jpeg';
+import jeelPhoto from '../assets/images/JeelS.jpeg';
+
 // SVG Instagram Icon
 const InstagramIcon = ({ size = 22 }) => (
   <svg
@@ -51,17 +55,17 @@ export default function ContactSection() {
       id: 1,
       name: "Rahil Shah",
       role: "Secretary",
-      roleColor: "#f59e0b", // Yellow badge
+      roleColor: "#fbbf24", // Yellow badge
       phone: "+91 99999 99999",
-      avatar: characterPng
+      avatar: RahilS
     },
     {
       id: 2,
       name: "Jeel Savaliya",
       role: "Tech Head",
-      roleColor: "#fca5a5", // Peach/Pink badge
+      roleColor: "#0284c7", // Blue badge
       phone: "+91 99999 99999",
-      avatar: stevePng
+      avatar: jeelPhoto
     }
   ];
 
