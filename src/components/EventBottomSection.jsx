@@ -125,7 +125,7 @@ export default function EventBottomSection() {
               </picture>
             </div>
             <h3 className="card-main-title location-title text-cyan">
-              SHRI BHAGUBHAI MAFATLAL AND COLLEGE OF ENGINEERING
+              SHRI BHAGUBHAI MAFATLAL POLYTECHNIC AND COLLEGE OF ENGINEERING
             </h3>
             <p className="card-sub-title text-cyan-sub">VILE PARLE</p>
 
