@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <rect width="400" height="120" rx="8" fill="#0f172a"/>
+  <!-- Gold Apex Shield Icon -->
+  <g transform="translate(25, 20)">
+    <polygon points="40,5 75,25 75,60 40,80 5,60 5,25" fill="#f59e0b" stroke="#b45309" stroke-width="4"/>
+    <polygon points="40,18 60,32 60,54 40,66 20,54 20,32" fill="#fbbf24"/>
+    <polygon points="40,28 50,37 50,48 40,54 30,48 30,37" fill="#ffffff"/>
+  </g>
+  <!-- Text -->
+  <text x="125" y="55" font-family="sans-serif" font-weight="900" font-size="26" fill="#fbbf24" letter-spacing="1">APEX CYBER</text>
+  <text x="125" y="82" font-family="sans-serif" font-weight="600" font-size="14" fill="#94a3b8" letter-spacing="3">DYNAMICS</text>
+</svg>

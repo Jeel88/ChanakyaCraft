@@ -7,6 +7,9 @@ import './AboutSection.css';
 import jeelPhoto from '../assets/images/JeelS.jpeg';
 import RahilS from '../assets/images/RahilS.jpeg';
 import JayD from '../assets/images/JayGs.jpeg';
+import ShivK from '../assets/images/ShivK.jpeg';
+import AryanJ from '../assets/images/AryanJ.jpeg';
+import DevC from '../assets/images/DevC.jpeg';
 
 import NeetaK from '../assets/images/NeetaK.jpeg';
 import MZShaikh from '../assets/images/MZShaikh.jpeg';
@@ -32,7 +35,7 @@ export default function AboutSection() {
       id: 2,
       name: "MRS. NEETA G. KADUKAR ",
       role: "VICE PRINCIPAL",
-      roleBg: "#fbbf24", // Yellow badge
+      roleBg: "#0284c7", // Blue badge
       roleColor: "#111827",
       avatar: NeetaK // Replace with imported photo variable (e.g. neetaPhoto)
     },
@@ -40,7 +43,7 @@ export default function AboutSection() {
       id: 3,
       name: "MR. Suresh Rajpurohit",
       role: "FACULTY COORDINATOR",
-      roleBg: "#0284c7", // Blue badge
+      roleBg: "#fbbf24", // Yellow badge
       roleColor: "#ffffff",
       avatar: stevePng // Replace with imported photo variable (e.g. sureshPhoto)
     },
@@ -62,7 +65,7 @@ export default function AboutSection() {
       role: "VICE PRESIDENT",
       roleBg: "#0284c7", // Blue badge
       roleColor: "#ffffff",
-      avatar: stevePng
+      avatar: ShivK
     },
     {
       id: 3,
@@ -87,8 +90,8 @@ export default function AboutSection() {
     { id: 9, name: "Mann Lodaliya", role: "SOCIAL MEDIA HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
     { id: 10, name: "Aanya Ghelani", role: "SOCIAL MEDIA HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: characterPng },
     { id: 11, name: "Kevin Mendapara", role: "MARKETING & PR HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng },
-    { id: 12, name: "Aryan Jevani", role: "LOGISTICS & SECURITY HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: characterPng },
-    { id: 13, name: "Dev Chande", role: "LOGISTICS SUPPORT HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: stevePng }
+    { id: 12, name: "Aryan Jevani", role: "LOGISTICS & SECURITY HEAD", roleBg: "#0284c7", roleColor: "#ffffff", avatar: AryanJ },
+    { id: 13, name: "Dev Chande", role: "LOGISTICS SUPPORT HEAD", roleBg: "#fbbf24", roleColor: "#111827", avatar: DevC }
   ];
 
   return (
@@ -126,7 +129,10 @@ export default function AboutSection() {
 
             {/* Description Text */}
             <p className="mc-fest-desc">
-              <strong>CHANAKYA</strong> is the flagship annual technical festival of the Information Technology Department at SVKM's Shri Bhagubhai Mafatlal Polytechnic. It serves as a premier platform where creativity, innovation, and technology converge to empower the next generation of engineers and innovators. CHANAKYA brings together brilliant minds to collaborate, compete, and showcase their technical prowess through hands-on hackathons and diverse technical challenges.
+              <strong>CHANAKYA</strong> is the flagship annual technical festival at SVKM's Shri Bhagubhai Mafatlal Polytechnic. It serves as a premier platform where innovation and technology converge to empower the next generation of engineers and problem-solvers.
+            </p>
+            <p className="mc-fest-desc" style={{ marginTop: '14px' }}>
+              At its core, the <strong>Chanakya 18-Hour Hackathon</strong> brings together passionate students from diverse technical backgrounds. Over an exciting 18-hour journey, participants collaborate, build, and present impactful solutions that address real-world challenges.
             </p>
           </div>
 

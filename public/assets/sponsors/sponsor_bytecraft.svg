@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <rect width="400" height="120" rx="8" fill="#0f172a"/>
+  <!-- Purple Pixel Craft Icon -->
+  <g transform="translate(25, 20)">
+    <rect x="0" y="0" width="80" height="80" rx="8" fill="#8b5cf6"/>
+    <rect x="16" y="16" width="48" height="48" fill="#a855f7"/>
+    <rect x="28" y="28" width="24" height="24" fill="#ffffff"/>
+  </g>
+  <!-- Text -->
+  <text x="125" y="55" font-family="sans-serif" font-weight="900" font-size="26" fill="#c084fc" letter-spacing="1">BYTECRAFT</text>
+  <text x="125" y="82" font-family="sans-serif" font-weight="600" font-size="14" fill="#94a3b8" letter-spacing="3">LABS &amp; MEDIA</text>
+</svg>

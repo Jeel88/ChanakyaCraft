@@ -1,34 +1,43 @@
 import React from 'react';
 import { ExternalLink, Phone, Award } from 'lucide-react';
-import riyaLogo from '/assets/sponsors/riya.png';
-import vantageoLogo from '/assets/sponsors/vantageo.png';
-import khadiLogo from '/assets/sponsors/khadi.png';
+import novaLogo from '/assets/sponsors/sponsor_nova.svg';
+import apexLogo from '/assets/sponsors/sponsor_apex.svg';
+import starlightLogo from '/assets/sponsors/sponsor_starlight.svg';
+import bytecraftLogo from '/assets/sponsors/sponsor_bytecraft.svg';
 import './SponsorsSection.css';
 
 const sponsorsData = [
   {
     id: 1,
-    name: 'RIYA ENTERPRISE',
-    logo: riyaLogo,
-    description: 'Promoting and delivering premier construction & infrastructure solutions with a focus on structural excellence and reliability.',
-    website: 'https://riyaenterprise.com',
-    phone: '+91 99999 99999',
-  },
-  {
-    id: 2,
-    name: 'VANTAGEO',
-    logo: vantageoLogo,
-    description: 'Leading technology & IT consulting firm specializing in scalable cloud architecture, custom software development, and enterprise digital solutions.',
-    website: 'https://vantageo.io',
+    name: 'NOVA TECH SOLUTIONS',
+    logo: novaLogo,
+    description: 'Empowering next-generation enterprise innovation through cutting-edge cloud infrastructure, AI solutions, and high-performance software development.',
+    website: 'https://novatechsolutions.example.com',
     phone: '+91 98765 43210',
   },
   {
+    id: 2,
+    name: 'APEX CYBER DYNAMICS',
+    logo: apexLogo,
+    description: 'Pioneering secure digital ecosystems, advanced cybersecurity protocols, and scalable tech solutions for modern global enterprises.',
+    website: 'https://apexcyberdynamics.example.com',
+    phone: '+91 91234 56789',
+  },
+  {
     id: 3,
-    name: 'KHADI INDIA',
-    logo: khadiLogo,
-    description: 'Promoting traditional Indian craftsmanship, handspun textiles, and sustainable village industries nationwide.',
-    website: 'https://khadiindia.gov.in',
-    phone: '+91 88888 88888',
+    name: 'STARLIGHT INNOVATIONS',
+    logo: starlightLogo,
+    description: 'Transforming ground-breaking ideas into reality through immersive tech, smart IoT engineering, and sustainable hardware systems.',
+    website: 'https://starlightinnovations.example.com',
+    phone: '+91 99887 76655',
+  },
+  {
+    id: 4,
+    name: 'BYTECRAFT LABS',
+    logo: bytecraftLogo,
+    description: 'Crafting scalable web applications, real-time data analytics engines, and digital experiences for high-impact tech hackathons.',
+    website: 'https://bytecraftlabs.example.com',
+    phone: '+91 90000 11122',
   }
 ];
 

@@ -147,7 +147,7 @@ export default function HackathonInfoSection() {
 
               {/* Main Introduction */}
               <p className="mc-modal-intro-text">
-                The <strong>Chanakya 18-Hour Hackathon</strong> is designed to inspire creativity, innovation, and problem-solving by bringing together passionate students from diverse technical backgrounds. Over an exciting 18-hour journey, participants will collaborate, design, develop, and present impactful solutions that address real-world challenges.
+                Welcome to the <strong>Chanakya 18-Hour Hackathon</strong>! This intense hands-on experience challenges participants to ideate, prototype, and pitch innovative technical projects under the guidance of industry mentors and expert judges.
               </p>
 
               {/* Consists Of Section */}

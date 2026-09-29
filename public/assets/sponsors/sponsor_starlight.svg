@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <rect width="400" height="120" rx="8" fill="#0f172a"/>
+  <!-- Green Emerald Star Icon -->
+  <g transform="translate(25, 20)">
+    <rect x="0" y="0" width="80" height="80" rx="16" fill="#10b981"/>
+    <path d="M40 10 L48 32 L70 40 L48 48 L40 70 L32 48 L10 40 L32 32 Z" fill="#ffffff"/>
+  </g>
+  <!-- Text -->
+  <text x="125" y="55" font-family="sans-serif" font-weight="900" font-size="24" fill="#34d399" letter-spacing="1">STARLIGHT</text>
+  <text x="125" y="82" font-family="sans-serif" font-weight="600" font-size="14" fill="#94a3b8" letter-spacing="3">INNOVATIONS</text>
+</svg>
