@@ -74,7 +74,7 @@ export default function EventBottomSection() {
                 />
               </picture>
             </div>
-            <h3 className="card-main-title text-cyan">23RD & 24TH OCT</h3>
+            <h3 className="card-main-title text-cyan">30TH & 31ST OCT</h3>
             <p className="card-sub-title text-cyan-sub">2 DAYS OF ENDLESS POSSIBILITIES</p>
           </div>
 
