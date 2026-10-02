@@ -47,4 +47,6 @@ The website is deployed using **Vercel** and is accessible through:
 ---
 
 **⛏️ Chanakya Committee**
-**🏆 18-Hour Hackathon | 📅 23–24 October**
+**🏆 18-Hour Hackathon | 📅 30–31 October**
+
+Copyright (c) 2026 Jeel Savaliya. All rights reserved.   
